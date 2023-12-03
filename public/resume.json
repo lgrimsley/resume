@@ -1,0 +1,103 @@
+{
+  "basics": {
+    "name": "Logan Grimsley",
+    "label": "Dynamic Developer",
+    "email": "lgrimsley@gmail.com",
+    "phone": "(502) 716-9026",
+    "url": "https://lgrimsley.com",
+    "resume_url": "https://lgrimsley.com/resume.pdf",
+    "summary": "Primary summary/overview of Logan Grimsley's career and skills.",
+    "status": "Open To Work",
+    "location": {
+      "address": "13208 Holly Forest Rd",
+      "postalCode": "KY 40245",
+      "city": "Louisville",
+      "countryCode": "US",
+      "region": "Kentucky"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "logan-grimsley",
+        "url": "https://linkedin.com/in/logan-grimsley",
+        "logo": "URL to LinkedIn logo"
+      }
+    ],
+    "image": "../assets/images/avatar.png"
+  },
+  "work": [
+    {
+      "company": "Metabolic, Remote",
+      "summary": "Company-wide summary of Logan Grimsley's role and contributions at Metabolic.",
+      "positions": [
+        {
+          "position": "Frontend Architect",
+          "startDate": "2022-05",
+          "endDate": "2023-12",
+          "summary": "Optional summary of the role."
+        },
+        {
+          "position": "Senior Full Stack Engineer",
+          "startDate": "2021-06",
+          "endDate": "2022-05"
+        },
+        {
+          "position": "Full Stack Engineer II",
+          "startDate": "2020-01",
+          "endDate": "2021-05"
+        }
+      ]
+    },
+    {
+      "company": "Crosby Interactive, Louisville",
+      "summary": "Company-wide summary of Logan Grimsley's role and contributions at Crosby Interactive.",
+      "positions": [
+        {
+          "position": "Chief Technical Officer",
+          "startDate": "2017-09",
+          "endDate": "2019-10"
+        },
+        {
+          "position": "Senior Web Developer",
+          "startDate": "2014-10",
+          "endDate": "2017-09"
+        },
+        {
+          "position": "Junior Web Developer",
+          "startDate": "2013-11",
+          "endDate": "2014-10"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project Magic AI - Powered Jira Planning",
+      "summary": "Summary of the Project Magic AI.",
+      "description": "Developed a tool to automate Jira ticket generation using LLMs. Designed Jira integration with custom field support. Implemented parallel processing for scale and responsive UX.",
+      "url": "https://projectmagic.ai",
+      "roles": ["Developer", "Architect"],
+      "entity": "Personal Project",
+      "type": "SaaS Prototype",
+      "keywords": ["Jira", "Automation", "LLM", "Nuxt 3", "Vue 3", "TailwindCSS", "Laravel 10", "MySQL", "AWS"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University Name",
+      "area": "Study Area",
+      "studyType": "Bachelor/Master",
+      "startDate": "Year",
+      "endDate": "Year",
+      "gpa": "GPA if applicable",
+      "courses": ["List of relevant courses"]
+    }
+  ],
+  "skills": {
+    "languages": ["TypeScript", "CSS/SASS", "PHP", "Node.js", "SQL"],
+    "technologies": ["Laravel", "Vue/Nuxt", "Tailwind", "Bootstrap", "jQuery", "Blade", "REST", "OpenAPI"],
+    "services": ["SSH", "UNIX", "AWS", "DigitalOcean", "NGINX", "Apache", "Git", "GitHub", "Jira", "Bitbucket", "Opsgenie"],
+    "tools": ["Visual Studio Code", "GPT-4 Copilot", "Postman", "Docker", "Firefox Developer Edition", "HeidiSQL"]
+  },
+  "softSkills": ["Ownership Mentality", "Collaborative", "User Focused", "Language & Articulation", "Leadership & Empathy"]
+}
