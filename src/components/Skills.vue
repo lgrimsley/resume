@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type Skills, type SoftSkills } from '@/types/resume';
-import { defineProps, type PropType } from 'vue';
+import { type PropType } from 'vue';
 
 const props = defineProps({
     skills: {
@@ -19,7 +19,7 @@ const props = defineProps({
             <div v-for="list, category in skills" class="flex flex-col space-between ">
                 <h3 class="text-sm font-bold mb-4 uppercase">{{ category }}</h3>
                 <div class="flex flex-wrap">
-                    <span v-for="skill in list" class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ skill }}</span>
+                    <span v-for="skill in list" class="bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2">{{ skill }}</span>
                 </div>
             </div>
         </div>

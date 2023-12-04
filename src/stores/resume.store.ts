@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { reactive } from 'vue';
 import { 
   type Resume,
   type Basics,

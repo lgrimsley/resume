@@ -2,7 +2,7 @@ export type Profile = {
     network: string;
     username: string;
     url: string;
-    logo: string;
+    icon: string;
 };
 
 export type Information = {
