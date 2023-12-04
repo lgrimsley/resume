@@ -13,18 +13,18 @@ const props = defineProps({
 </script>
 
 <template>
-   <div class="p-7 shadow md:rounded-xl bg-white overflow-hidden relative dark:bg-zinc-700 dark:text-white">
+   <div class="p-7 overflow-hidden relative dark:text-white">
         <div class="flex flex-col gap-6">
             <div v-for="list, category in skills" class="flex flex-col space-between ">
                 <h3 class="text-sm font-bold mb-4 uppercase">{{ category }}</h3>
                 <div class="flex flex-wrap">
-                    <span v-for="skill in list" class="bg-gray-200 dark:bg-zinc-900 dark:text-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2">{{ skill }}</span>
+                    <span v-for="skill in list" class="bg-gray-200 dark:bg-zinc-700 dark:text-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2">{{ skill }}</span>
                 </div>
             </div>
             <div v-if="softSkills?.length">
                 <h3 class="text-sm font-bold mb-4 uppercase">Soft Skills</h3>
                 <div class="flex flex-wrap">
-                    <span v-for="skill in softSkills" class="bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:bg-zinc-900 dark:text-gray-100 ">{{ skill }}</span>
+                    <span v-for="skill in softSkills" class="bg-gray-200 dark:bg-zinc-700 rounded-full px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
                 </div>
             </div>
         </div>

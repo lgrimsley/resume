@@ -35,10 +35,10 @@ const downloadResume = () => {
 </script>
 
 <template>
-    <main class="flex justify-center items-top md:p-8 " :class="{'dark bg-zinc-900': useAppStore().getDarkMode, 'bg-gray-200': !useAppStore().getDarkMode}">
+    <main class="flex justify-center items-top md:p-8 " :class="{'dark bg-zinc-900': useAppStore().getDarkMode, 'bg-white': !useAppStore().getDarkMode}">
         <div class="grid gap-8 lg:grid-cols-3 container xl:w-4/5 lg:w-5/6 relative">
             <!-- left col -->
-            <div class="flex flex-col md:gap-8 gap-4 justify-start">
+            <div class="flex flex-col md:gap-2 gap-2 justify-start">
                 <Basic v-if="basics" :basics="basics" @download-resume="downloadResume" />
                 <Information v-if="information" :information="information" />
                 <Skills v-if="skills && softSkills" :skills="skills" :soft-skills="softSkills" />

@@ -11,11 +11,11 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="shadow md:rounded-xl bg-white dark:bg-zinc-700 dark:text-white overflow-hidden relative">
+    <div class="dark:bg-zinc-900 rounded-tr rounded-tl dark:text-white overflow-hidden relative">
         <div class="h-32 bg-cover" style="background-image: url('/abstract_bg.png'); background-position: 0% 70%;"></div>
         <div class="pt-14 p-7  relative">
             <span class="border border-black dark:border-gray-200 dark:text-gray-200 absolute p-1 text-xs rounded right-8 top-4">{{ basics?.status }}</span>
-            <img v-if="basics?.image" :src="basics.image" alt="Avatar" class="absolute w-32 h-32 rounded-full -top-16 border-2 border-gray-200 dark:border-zinc-900" />
+            <img v-if="basics?.image" :src="basics.image" alt="Avatar" class="absolute w-32 h-32 rounded-full -top-16 border-2 border-white dark:border-zinc-900" />
             <div class="flex space-between w-full items-center py-6">
                 <div class="w-1/2">
                     <div class="text-2xl mb-1 font-semibold">{{ basics?.name }}</div>

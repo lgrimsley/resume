@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { type WorkExperience } from '@/types/resume';
+import { Icon } from '@iconify/vue/dist/iconify.js';
 import { type PropType } from 'vue';
 
 const props = defineProps({
@@ -10,18 +11,23 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="p-7 shadow md:rounded-xl bg-white overflow-hidden relative dark:bg-zinc-700 dark:text-white">
-        <div class="mb-5 item-section" v-for="job, index in experience">
-            <div class="flex">
-                <div class="w-1/4 flex flex-col">
-                    <h2 class="text-xl font-bold uppercase mb-4">
+    <div class="px-7 overflow-hidden relative dark:text-white flex flex-col gap-8">
+        <div class="bg-gray-100 dark:bg-zinc-800 p-7 rounded-sm" v-for="job, index in experience">
+            <div class="flex flex-col md:flex-row md:gap-1 gap-4">
+                <div class="md:w-96 flex flex-col gap-4">
+                    <h2 class="text-xl font-bold uppercase">
                         {{ job?.company }}
                     </h2>
-                    <h5 v-for="position in job.positions" class="text-sm mb-2 flex flex-col">
-                        {{ position.position }} <small class="ml-1 text-gray-500 dark:text-gray-300"> {{ position.startDate }} - {{ position.endDate }} </small>
-                    </h5>
+                    <a :href="job.url" target="_blank" class="text-sm flex items-center gap-1 text-gray-700 dark:text-gray-200">
+                        {{ job.url }} <Icon icon="majesticons:open-line" width="16px" />
+                    </a>
+                    <div>
+                        <h5 v-for="position in job.positions" class="text-sm mb-2 flex flex-col font-semibold">
+                            {{ position.position }} <small class="ml-1 text-gray-500 dark:text-gray-300 font-light"> {{ position.startDate }} - {{ position.endDate }} </small>
+                        </h5>
+                    </div>
                 </div>
-                <div class="w-3/4">
+                <div class="w-full">
                     <p class="mb-2 text-lg" v-if="job?.summary">
                         {{ job.summary }}
                     </p>
@@ -37,7 +43,6 @@ const props = defineProps({
                     </div>
                 </div>
             </div>
-            <div v-if="(index+1) != experience?.length" class="h-[1px] w-full my-8 bg-zinc-300"></div>
         </div>
     </div>
 </template>

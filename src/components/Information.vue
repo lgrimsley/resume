@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="p-7 shadow md:rounded-xl bg-white overflow-hidden relative dark:bg-zinc-700 dark:text-white">
+    <div class="p-7  overflow-hidden relative dark:text-white">
         <h2 class="text-lg font-semibold mb-4">Information</h2>
         <div class="space-y-3">
             <div class="flex justify-between">

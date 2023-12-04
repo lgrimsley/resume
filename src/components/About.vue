@@ -25,15 +25,13 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="p-7 shadow md:rounded-xl bg-white overflow-hidden relative dark:bg-zinc-700 dark:text-white">
-        <h2 class="text-lg font-semibold mb-4">About me</h2>
+    <div class="px-7 overflow-hidden relative dark:text-white">
+        <h2 class="text-lg font-semibold mb-4 uppercase">About</h2>
         <p class="text-gray-600 mb-5 dark:text-gray-200">
             {{ basics?.summary }}
         </p>
-        
-        <div class="border-t border-gray-200 my-5 dark:border-gray-500"></div>
-        
-        <ul class="flex space-x-8 font-medium">
+                
+        <ul class="flex space-x-8 font-medium mt-8">
             <li 
             v-if="workExperience?.length" 
             class="pb-2 cursor-pointer border-b-2 border-transparent hover:border-violet-700 hover:dark:border-violet-500" 
