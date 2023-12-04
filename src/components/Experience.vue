@@ -3,11 +3,12 @@
 </script>
 
 <template>
+    
     <div class="p-7 shadow md:rounded-xl bg-white overflow-hidden relative"><!-- Start Experience Block -->
         <h2 class="text-lg font-semibold mb-4">Experience</h2>
         <div class="mb-5 item-section">
-            <div class="company-logo" style="background-color: #1DA1F2;">
-                <i class="bx bxl-twitter text-3xl"></i>
+            <div class="company-logo">
+                Metabolic
             </div>
 
             <div class="w-full space-y-5">
