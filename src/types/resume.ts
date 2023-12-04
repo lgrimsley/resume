@@ -37,17 +37,17 @@ export type Position = {
 export type WorkExperience = {
     company: string;
     summary: string;
+    url: string;
+    logo: string;
+    bullets: string[];
     positions: Position[];
 };
 
 export type Project = {
     name: string;
     summary: string;
-    description: string;
     url: string;
-    roles: string[];
-    entity: string;
-    type: string;
+    bullets: string[];
     keywords: string[];
 };
 

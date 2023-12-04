@@ -33,8 +33,16 @@
   },
   "work": [
     {
-      "company": "Metabolic, Remote",
-      "summary": "Company-wide summary of Logan Grimsley's role and contributions at Metabolic.",
+      "company": "Metabolic",
+      "summary": "",
+      "bullets": [
+        "Initiated and led the front-end department as Frontend Architect, hiring and training developers to swiftly contribute to production.",
+        "Developed high-performance front-end applications with Nuxt 3/Vue 3 and robust APIs using Laravel, enhancing user engagement and operational eciency.",
+        "Architected core infrastructure and services for system reliability and scale.",
+        "Led service uptime monitoring and optimization of systems, including conversion rate & CPC optimization, UX overhauls, and legacy system abstraction.",
+        "Collaborated with UX designers and leadership in creating scalable, user-centric features, contributing to a jump in company revenue from $30 million to $90 million annually."
+      ],
+      "location": "Remote",
       "positions": [
         {
           "position": "Frontend Architect",
@@ -55,8 +63,15 @@
       ]
     },
     {
-      "company": "Crosby Interactive, Louisville",
-      "summary": "Company-wide summary of Logan Grimsley's role and contributions at Crosby Interactive.",
+      "company": "Crosby Interactive",
+      "summary": "",
+      "bullets": [
+        "Led the development team as CTO; improved eciency and profitability by implementing Agile workflows.",
+        "As Senior Web Developer, led and executed projects over $200,000, showcasing exceptional technical acumen and an ownership mentality.",
+        "Developed and continuously improved a SaaS CRM system using Laravel.",
+        "Started as Junior Developer, quickly advancing by mastering WordPress, Magento, and Zend, and excelling in client management and upselling."     
+      ],
+      "location": "Louisville, KY",
       "positions": [
         {
           "position": "Chief Technical Officer",
@@ -78,27 +93,20 @@
   ],
   "projects": [
     {
-      "name": "Project Magic AI - Powered Jira Planning",
-      "summary": "Summary of the Project Magic AI.",
-      "description": "Developed a tool to automate Jira ticket generation using LLMs. Designed Jira integration with custom field support. Implemented parallel processing for scale and responsive UX.",
+      "name": "Project Magic",
+      "summary": "AI Powered Jira Planning - SaaS Prototype",
       "url": "https://projectmagic.ai",
-      "roles": ["Developer", "Architect"],
-      "entity": "Personal Project",
-      "type": "SaaS Prototype",
+      "bullets": [
+        "Developed a complex tool to automate Jira ticket generation using LLMs.",
+        "Designed comprehensive Jira integration with flexible custom field support.",
+        "Implemented parallel processing paradigms for scale and a responsive UX.",
+        "Generate a highly customizable set of tickets for a described project in seconds.",
+        "Technical Stack: TailwindCSS, Nuxt 3, Vue 3, Pinia, Laravel 10, MySQL, AWS."
+      ],
       "keywords": ["Jira", "Automation", "LLM", "Nuxt 3", "Vue 3", "TailwindCSS", "Laravel 10", "MySQL", "AWS"]
     }
   ],
-  "education": [
-    {
-      "institution": "University Name",
-      "area": "Study Area",
-      "studyType": "Bachelor/Master",
-      "startDate": "Year",
-      "endDate": "Year",
-      "gpa": "GPA if applicable",
-      "courses": ["List of relevant courses"]
-    }
-  ],
+  "education": [],
   "skills": {
     "languages": ["TypeScript", "CSS/SASS", "PHP", "Node.js", "SQL"],
     "technologies": ["Laravel", "Vue/Nuxt", "Tailwind", "Bootstrap", "jQuery", "Blade", "REST", "OpenAPI"],
