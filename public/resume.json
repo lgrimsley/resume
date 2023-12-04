@@ -1,19 +1,19 @@
 {
   "basics": {
     "name": "Logan Grimsley",
-    "label": "Dynamic Developer",
+    "label": "Full Stack Developer",
     "email": "lgrimsley@gmail.com",
     "phone": "(502) 716-9026",
     "url": "https://lgrimsley.com",
-    "resume_url": "https://lgrimsley.com/resume.pdf",
+    "resume_url": "/Logan Grimsley - Resume 11_2023.pdf",
     "summary": "Primary summary/overview of Logan Grimsley's career and skills.",
     "status": "Open To Work",
-    "location": {
-      "address": "13208 Holly Forest Rd",
-      "postalCode": "KY 40245",
-      "city": "Louisville",
-      "countryCode": "US",
-      "region": "Kentucky"
+    "information": {
+      "location": "Louisville, KY",
+      "yearsOfExperience": "10+",
+      "availability": "Full Time",
+      "relocation": "Open to Relocation",
+      "remote": "Open to Remote"
     },
     "profiles": [
       {
@@ -23,7 +23,7 @@
         "logo": "URL to LinkedIn logo"
       }
     ],
-    "image": "../assets/images/avatar.png"
+    "image": "/avatar.png"
   },
   "work": [
     {
@@ -97,7 +97,7 @@
     "languages": ["TypeScript", "CSS/SASS", "PHP", "Node.js", "SQL"],
     "technologies": ["Laravel", "Vue/Nuxt", "Tailwind", "Bootstrap", "jQuery", "Blade", "REST", "OpenAPI"],
     "services": ["SSH", "UNIX", "AWS", "DigitalOcean", "NGINX", "Apache", "Git", "GitHub", "Jira", "Bitbucket", "Opsgenie"],
-    "tools": ["Visual Studio Code", "GPT-4 Copilot", "Postman", "Docker", "Firefox Developer Edition", "HeidiSQL"]
+    "tools": ["Visual Studio Code", "GPT-4", "Copilot", "Postman", "Docker", "Firefox Developer Edition", "HeidiSQL"]
   },
   "softSkills": ["Ownership Mentality", "Collaborative", "User Focused", "Language & Articulation", "Leadership & Empathy"]
 }

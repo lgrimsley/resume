@@ -3,14 +3,14 @@ import { reactive } from 'vue';
 import { 
   type Resume,
   type Basics,
-  type Location,
   type Profile,
   type WorkExperience,
   type Project,
   type Education,
   type Skills,
   type SoftSkills,
-  type ResumeState
+  type ResumeState,
+  type Information
  } from '../types/resume';
 
 export const useResumeStore = defineStore('resume', {
@@ -21,7 +21,7 @@ export const useResumeStore = defineStore('resume', {
   getters: {
     getResume: (state): Resume | null => state.resume,
     getBasics: (state): Basics | null => state.resume?.basics ?? null,
-    getLocation: (state): Location | null => state.resume?.basics.location ?? null,
+    getInformation: (state): Information | null => state.resume?.basics.information ?? null,
     getProfiles: (state): Profile[] | [] => state.resume?.basics.profiles ?? [],
     getImageUrl: (state): string | null => state.resume?.basics.image ?? null,
     getWorkExperience: (state): WorkExperience[] | []  => state.resume?.work ?? [],

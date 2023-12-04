@@ -1,26 +1,30 @@
 <script setup lang="ts">
-import { type Basics } from '@/types/resume.ts';
+import { type Basics } from '@/types/resume';
+import { defineProps, type PropType } from 'vue';
 
 const props = defineProps({
     basics: {
-        type: Object as Basics,
-        default: {}
+        type: Object as PropType<Basics>
     }
 });
 </script>
 
 <template>
-    <div class="shadow rounded-xl overflow-hidden"><!-- Start User Block -->
-        <div class="h-32 bg-cover" style="background-image: url('assets/img/cover.jpg');"></div>
-        <div class="pt-14 p-7 bg-white relative">
-            <span class="status-badge bg-gray-400">{{ basics.status}}</span>
-            <a href="/personal_cv/"><img src="" alt="Avatar" class="user-photo" /></a>
-            <div class="text-lg font-semibold mb-1.5">Cristopher Abbott</div>
-            <div class="text-sm text-gray-400 mb-7">Senior Developer</div>
-            <div class="flex group">
-                <button class="download-btn">Download CV</button>
-                <button class="download-btn-icon"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></button>
+    <div class="shadow md:rounded-xl bg-white overflow-hidden relative">
+        <div class="h-32 bg-cover" style="background-image: url('/abstract_bg.png'); background-position: 0% 70%;"></div>
+        <div class="pt-14 p-7  relative">
+            <span class="border border-black absolute p-1 text-xs rounded right-8 top-4">{{ basics?.status }}</span>
+            <img v-if="basics?.image" :src="basics.image" alt="Avatar" class="absolute w-32 h-32 rounded-full -top-16 border-2 border-gray-200" />
+            <div class="text-lg font-semibold mt-3 mb-1">{{ basics?.name }}</div>
+            <div class="text-sm text-gray-600 mb-7">{{ basics?.label }}</div>
+            <div class="flex group text-center justify-center text-white rounded-lg" @click="$emit('download-resume')">
+                <button class="w-5/6 bg-violet-600 py-4 rounded-tl-lg rounded-bl-lg hover:bg-violet-800 font-semibold transition-ease-all">Download CV</button>
+                <button class="w-1/6 bg-violet-800 py-4 text-center flex justify-center rounded-tr-lg rounded-br-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                </button>
             </div>
         </div>
-    </div><!-- End User Block -->
+    </div>
 </template>

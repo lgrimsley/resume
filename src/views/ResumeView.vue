@@ -1,58 +1,41 @@
 <script setup lang="ts">
 import BasicSection from '@/components/BasicSection.vue'
+import InformationSection from '@/components/InformationSection.vue'
+import SkillsSection from '@/components/SkillsSection.vue';
+
 import { useResumeStore } from '@/stores/resume.store';
 import { onMounted, computed } from 'vue';
 
 const basics = computed(() => useResumeStore().getBasics);
+const information = computed(() => useResumeStore().getInformation);
+const skills = computed(() => useResumeStore().getSkills);
+const softSkills = computed(() => useResumeStore().getSoftSkills);
 
 onMounted(async () => {
     await useResumeStore().hydrate();
 });
 
+const downloadResume = () => {
+    if (!basics.value?.resume_url) { return; }
+    const link = document.createElement('a');
+    link.href = basics.value.resume_url;
+    link.download = basics.value.resume_url;
+    link.target = '_blank';
+    link.click();
+}
 </script>
 
 <template>
-    <main >
-        <div class="grid gap-5 lg:grid-cols-3">
-            <div class="space-y-5"><!-- Start Left Side -->
-                <BasicSection v-if="basics" :basics="basics" />
+    <main class="bg-gray-200 flex justify-center items-top md:p-8 ">
+        <div class="grid gap-5 lg:grid-cols-3 container xl:w-4/5 lg:w-5/6">
 
-                <div class="p-7 block-section"><!-- Start Info Block -->
-                    <h2 class="block-title">Information</h2>
-                    <div class="space-y-4">
-                        <div class="flex justify-between">
-                            <div class="text-gray-400">Location</div>
-                            <div class="font-medium text-right text-gray-600">London</div>
-                        </div>
-                        <div class="flex justify-between">
-                            <div class="text-gray-400">Experience</div>
-                            <div class="font-medium text-right text-gray-600">3+ years</div>
-                        </div>
-                        <div class="flex justify-between">
-                            <div class="text-gray-400">Availability</div>
-                            <div class="font-medium text-right text-gray-600">1 week</div>
-                        </div>
-                        <div class="flex justify-between">
-                            <div class="text-gray-400">Relocation</div>
-                            <div class="font-medium text-right text-gray-600">No</div>
-                        </div>
-                    </div>
-                </div><!-- End Info Block -->
-
-                <div class="p-7 block-section flow-root"><!-- Start Skills Block -->
-                    <h2 class="block-title">Skills</h2>
-                    <div class="-m-2 flex flex-wrap">
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Vue</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">Java</span>
-                    </div>
-                </div><!-- End Skills Block -->
-
-            </div><!-- End Left Side -->
-
+            <!-- left col -->
+            <div class="flex flex-col md:gap-8 gap-4 justify-start">
+                <BasicSection v-if="basics" :basics="basics" @download-resume="downloadResume" />
+                <InformationSection v-if="information" :information="information" />
+                <SkillsSection v-if="skills && softSkills" :skills="skills" :soft-skills="softSkills" />
+            </div>
+            <!-- end left col -->
             <div class="space-y-5 lg:col-span-2"><!-- Start Right Side -->
 
                 <div class="p-7 pb-0 block-section"><!-- Start About Me Block -->

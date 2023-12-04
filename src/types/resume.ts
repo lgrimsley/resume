@@ -5,12 +5,12 @@ export type Profile = {
     logo: string;
 };
 
-export type Location = {
-    address: string;
-    postalCode: string;
-    city: string;
-    countryCode: string;
-    region: string;
+export type Information = {
+    location: string;
+    yearsOfExperience: string;
+    availability: string;
+    relocation: string;
+    remote: string;
 };
 
 export type Basics = {
@@ -18,9 +18,11 @@ export type Basics = {
     label: string;
     email: string;
     phone: string;
+    status: string;
+    resume_url: string;
     url: string;
     summary: string;
-    location: Location;
+    information: Information;
     profiles: Profile[];
     image: string;
 };
