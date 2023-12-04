@@ -12,7 +12,7 @@ const props = defineProps({
 
 <template>
     <div class="px-7 overflow-hidden relative dark:text-white flex flex-col gap-8">
-        <div class="bg-gray-100 dark:bg-zinc-800 p-7 rounded-sm" v-for="job, index in experience">
+        <div class="border-gray-200 dark:border-zinc-800 border p-7 rounded" v-for="job, index in experience">
             <div class="flex flex-col md:flex-row md:gap-1 gap-4">
                 <div class="md:w-96 flex flex-col gap-4">
                     <h2 class="text-xl font-bold uppercase">
@@ -33,9 +33,9 @@ const props = defineProps({
                     </p>
                     <div v-if="job?.bullets.length">
                         <h5 class="text-sm font-bold mb-2 uppercase">Responsibilities</h5>
-                        <ul  class="pl-2">
+                        <ul  class="pl-4">
                             <li v-for="bullet in job.bullets" class=" mb-3 list-[disclosure-closed]">
-                                <p class="text-sm">
+                                <p class="text-sm ml-1">
                                     {{ bullet }}
                                 </p>
                             </li>

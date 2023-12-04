@@ -12,7 +12,7 @@ const props = defineProps({
 
 <template>
    <div class="px-7 overflow-hidden relative dark:text-white">
-        <div class="mb-5 bg-gray-100 dark:bg-zinc-800 p-7 rounded-sm" v-for="project, index in projects">
+        <div class="border-gray-200 dark:border-zinc-800 border p-7 rounded" v-for="project, index in projects">
             <div class="flex md:flex-row flex-col gap-4">
                 <div class="md:w-96 flex flex-col gap-3">
                     <h2 class="text-xl font-bold uppercase">
@@ -29,7 +29,7 @@ const props = defineProps({
                     <p class="text-lg" v-if="project?.summary">
                         {{ project.summary }}
                     </p>
-                    <img v-if="project.image_url" :src="project.image_url" class="rounded-lg w-5/6 border-2 border-gray-700 dark:border-zinc-600"/>
+                    <img v-if="project.image_url" :src="project.image_url" class="rounded-lg w-5/6 border border-gray-700 dark:border-zinc-600"/>
 
                     <ul v-if="project?.bullets.length" class="pl-4">
                         <li v-for="bullet in project.bullets" class=" mb-3 list-[disclosure-closed]">
