@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="p-7 shadow md:rounded-xl bg-white overflow-hidden relative"><!-- Start Education Block -->
+    <div class="p-7 shadow md:rounded-xl bg-white overflow-hidden relative dark:bg-zinc-700 dark:text-white"><!-- Start Education Block -->
                     <h2 class="text-lg font-semibold mb-4">Education</h2>
                     <div class="mb-5 item-section">
                         <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-cover" style="background-image: url('assets/img/bu-logo.jpg');">

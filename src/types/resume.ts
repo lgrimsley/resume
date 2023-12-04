@@ -47,6 +47,7 @@ export type Project = {
     name: string;
     summary: string;
     url: string;
+    image_url: string;
     bullets: string[];
     keywords: string[];
 };

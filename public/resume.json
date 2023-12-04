@@ -96,6 +96,7 @@
       "name": "Project Magic",
       "summary": "AI Powered Jira Planning - SaaS Prototype",
       "url": "https://projectmagic.ai",
+      "image_url": "/project-magic.png",
       "bullets": [
         "Developed a complex tool to automate Jira ticket generation using LLMs.",
         "Designed comprehensive Jira integration with flexible custom field support.",

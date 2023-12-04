@@ -4,7 +4,7 @@ import { type Page, type AppState } from '../types/app';
 export const useAppStore = defineStore('app', {
     state: (): AppState => ({
         page: 'experience',
-        darkMode: false
+        darkMode: (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? true : false
     }),
     getters: {
         getDarkMode: (state): boolean => state.darkMode,

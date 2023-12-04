@@ -6,6 +6,7 @@ import About from '@/components/About.vue';
 import Experience from '@/components/Experience.vue';
 import Education from '@/components/Education.vue';
 import Projects from '@/components/Projects.vue';
+import DarkModeToggle from '@/components/DarkModeToggle.vue';
 
 import { useResumeStore } from '@/stores/resume.store';
 import { useAppStore } from '@/stores/app.store';
@@ -34,9 +35,8 @@ const downloadResume = () => {
 </script>
 
 <template>
-    <main class="bg-gray-200 flex justify-center items-top md:p-8 ">
-        <div class="grid gap-8 lg:grid-cols-3 container xl:w-4/5 lg:w-5/6">
-
+    <main class="flex justify-center items-top md:p-8 " :class="{'dark bg-zinc-900': useAppStore().getDarkMode, 'bg-gray-200': !useAppStore().getDarkMode}">
+        <div class="grid gap-8 lg:grid-cols-3 container xl:w-4/5 lg:w-5/6 relative">
             <!-- left col -->
             <div class="flex flex-col md:gap-8 gap-4 justify-start">
                 <Basic v-if="basics" :basics="basics" @download-resume="downloadResume" />
@@ -60,6 +60,7 @@ const downloadResume = () => {
             </div>
             <!-- end right col -->
 
+            <DarkModeToggle class="fixed bottom-4 right-4 scale-75" />
         </div>
     </main>
 </template>
