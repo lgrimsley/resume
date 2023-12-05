@@ -11,10 +11,11 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="px-7 overflow-hidden relative dark:text-white flex flex-col gap-8">
+    <div class="overflow-hidden relative dark:text-white flex flex-col gap-8">
         <div class="border-gray-200 dark:border-zinc-800 border p-7 rounded" v-for="job, index in experience">
             <div class="flex flex-col md:flex-row md:gap-1 gap-4">
-                <div class="md:w-96 flex flex-col gap-4">
+                <div class="md:w-96 flex flex-col gap-4 pr-4">
+                    <img v-if="job?.logo_url" :src="job.logo_url" class="" />
                     <h2 class="text-xl font-bold uppercase">
                         {{ job?.company }}
                     </h2>
@@ -34,7 +35,8 @@ const props = defineProps({
                     <div v-if="job?.bullets.length">
                         <h5 class="text-sm font-bold mb-2 uppercase">Responsibilities</h5>
                         <ul  class="pl-4">
-                            <li v-for="bullet in job.bullets" class=" mb-3 list-[disclosure-closed]">
+                            <li v-for="bullet in job.bullets" class=" mb-3 list-none relative">
+                                <Icon icon="majesticons:chevron-right" width="18px" class="absolute -left-5 top-0.5 text-violet-800 dark:text-violet-500" />
                                 <p class="text-sm ml-1">
                                     {{ bullet }}
                                 </p>

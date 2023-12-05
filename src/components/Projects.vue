@@ -11,7 +11,7 @@ const props = defineProps({
 </script>
 
 <template>
-   <div class="px-7 overflow-hidden relative dark:text-white">
+   <div class="overflow-hidden relative dark:text-white">
         <div class="border-gray-200 dark:border-zinc-800 border p-7 rounded" v-for="project, index in projects">
             <div class="flex md:flex-row flex-col gap-4">
                 <div class="md:w-96 flex flex-col gap-3">
@@ -21,8 +21,8 @@ const props = defineProps({
                     <a :href="project.url" target="_blank" class="text-sm flex items-center gap-1 text-gray-700 dark:text-gray-200">
                         {{ project.url }} <Icon icon="majesticons:open-line" width="16px" />
                     </a>
-                    <div class="flex flex-wrap w-3/4 mt-2">
-                        <span v-for="skill in project.keywords" class="bg-gray-200 dark:bg-zinc-700 rounded-full px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
+                    <div class="flex flex-wrap pr-4 mt-2">
+                        <span v-for="skill in project.keywords" class="bg-gradient-to-tr from-violet-600 to-purple-900 text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
                     </div>
                 </div>
                 <div class="w-full flex flex-col gap-3">
@@ -32,7 +32,8 @@ const props = defineProps({
                     <img v-if="project.image_url" :src="project.image_url" class="rounded-lg w-5/6 border border-gray-700 dark:border-zinc-600"/>
 
                     <ul v-if="project?.bullets.length" class="pl-4">
-                        <li v-for="bullet in project.bullets" class=" mb-3 list-[disclosure-closed]">
+                        <li v-for="bullet in project.bullets" class=" mb-3 list-none relative">
+                            <Icon icon="majesticons:chevron-right" width="18px" class="absolute -left-5 top-0.5 text-violet-800 dark:text-violet-500" />
                             <p class="text-sm">
                                 {{ bullet }}
                             </p>

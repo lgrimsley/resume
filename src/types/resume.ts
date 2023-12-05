@@ -37,6 +37,7 @@ export type Position = {
 export type WorkExperience = {
     company: string;
     summary: string;
+    logo_url: string;
     url: string;
     logo: string;
     bullets: string[];
