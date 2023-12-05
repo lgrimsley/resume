@@ -5,6 +5,8 @@ import colors from '@/colors';
 import Experience from '@/components/Experience.vue';
 import Education from '@/components/Education.vue';
 import Projects from '@/components/Projects.vue';
+import References from '@/components/References.vue';
+import Recommendations from '@/components/Recommendations.vue';
 
 export const useAppStore = defineStore('app', {
     state: (): AppState => ({
@@ -67,6 +69,22 @@ export const useAppStore = defineStore('app', {
                     label: 'Education',
                     data: resume.education,
                     component: Education
+                });
+            }
+            if (resume.references.length > 0) {
+                pages.push({
+                    key: 'references',
+                    label: 'References',
+                    data: resume.references,
+                    component: References
+                });
+            }
+            if (resume.recommendations.length > 0) {
+                pages.push({
+                    key: 'recommendations',
+                    label: 'Recommendations',
+                    data: resume.recommendations,
+                    component: Recommendations
                 });
             }
             this.setAvailablePages(pages);

@@ -39,7 +39,7 @@ const appColor = computed(() => useAppStore().getAppColor);
                         <h5 class="font-semibold mb-4 uppercase tracking-wider">Responsibilities</h5>
                         <ul  class="pl-4">
                             <li v-for="bullet in job.bullets" class=" mb-3 list-none relative">
-                                <Icon icon="majesticons:chevron-right" width="18px" :class="`absolute -left-5 top-0.5 text-${appColor}-800 dark:text-${appColor}-500 `" />
+                                <Icon icon="majesticons:chevron-right" width="18px" :class="`absolute -left-5 top-0.5 text-${appColor}-500 `" />
                                 <p class="ml-1 font-light tracking-wide">
                                     {{ bullet }}
                                 </p>

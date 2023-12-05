@@ -10,7 +10,7 @@ export type AppState = {
 }
 
 export type Page = {
-    key: 'experience' | 'projects' | 'education';
+    key: 'experience' | 'projects' | 'education' | 'references' | 'recommendations';
     label: string;
     data: WorkExperience[] | Project[] | Education[];
     component: Component;

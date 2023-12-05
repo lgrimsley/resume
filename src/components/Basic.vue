@@ -72,7 +72,7 @@ onUnmounted(() => {
                 <div class="xl:text-2xl text-xl  mb-1 font-bold text-zinc-800 dark:text-zinc-100">{{ basics?.name }}</div>
                 <div class="xl:text-xl text-lg text-gray-600 dark:text-gray-300">{{ basics?.label }}</div>
             </div>
-            <button ref="downloadButton"  @mouseover="buttonHover = true" @mouseleave="buttonHover = false" :class="[gradientClass, gradientHoverClass]" class="w-full justify-center flex group text-white items-center mt-2 py-4 rounded font-semibold relative" @click="$emit('download-resume')">
+            <button ref="downloadButton"  @mouseover="buttonHover = true" @mouseleave="buttonHover = false" :class="[gradientClass, gradientHoverClass]" class="w-full justify-center flex group text-white items-center mt-2 py-4 md:rounded font-semibold relative" @click="$emit('download-resume')">
                 <span  :style="buttonHover ? moveRightStyle : ''" ref="downloadText" class="flex gap-2 items-center transition ease-in-out delay-150">
                     Download Resume
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

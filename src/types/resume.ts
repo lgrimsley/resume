@@ -1,16 +1,12 @@
-export type Profile = {
-    network: string;
-    username: string;
-    url: string;
-    icon: string;
-};
-
-export type Information = {
-    location: string;
-    yearsOfExperience: string;
-    availability: string;
-    relocation: string;
-    remote: string;
+export type Resume = {
+    basics: Basics;
+    work: WorkExperience[];
+    projects: Project[];
+    education: Education[];
+    references: Reference[];
+    recommendations: Recommendation[];
+    skills: Skills;
+    softSkills: SoftSkills;
 };
 
 export type Basics = {
@@ -25,6 +21,21 @@ export type Basics = {
     information: Information;
     profiles: Profile[];
     image: string;
+};
+
+export type Profile = {
+    network: string;
+    username: string;
+    url: string;
+    icon: string;
+};
+
+export type Information = {
+    location: string;
+    yearsOfExperience: string;
+    availability: string;
+    relocation: string;
+    remote: string;
 };
 
 export type Position = {
@@ -72,14 +83,25 @@ export type Skills = {
 
 export type SoftSkills = string[];
 
-export type Resume = {
-    basics: Basics;
-    work: WorkExperience[];
-    projects: Project[];
-    education: Education[];
-    skills: Skills;
-    softSkills: SoftSkills;
-};
+export type Reference = {
+    name: string;
+    position: string;
+    company: string;
+    email: string;
+    phone: string;
+    linkedin: string;
+    relationship: string;
+    reference_type: string;
+}
+
+export type Recommendation = {
+    name: string;
+    position: string;
+    company: string;
+    email: string;
+    linkedin: string;
+    summary: string;
+}
 
 export type ResumeState = {
   resume: Resume | null;

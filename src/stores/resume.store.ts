@@ -9,7 +9,9 @@ import {
   type Skills,
   type SoftSkills,
   type ResumeState,
-  type Information
+  type Information,
+  type Reference,
+  type Recommendation
  } from '../types/resume';
 import { useAppStore } from './app.store';
 
@@ -28,7 +30,9 @@ export const useResumeStore = defineStore('resume', {
     getProjects: (state): Project[] | []  => state.resume?.projects ?? [],
     getEducation: (state): Education[] | []  => state.resume?.education ?? [],
     getSkills: (state): Skills | null  => state.resume?.skills ?? null,
-    getSoftSkills: (state): SoftSkills | null  => state.resume?.softSkills ?? null
+    getSoftSkills: (state): SoftSkills | null => state.resume?.softSkills ?? null,
+    getReferences: (state): Reference[] | [] => state.resume?.references ?? [],
+    getRecommendations: (state): Recommendation[] | [] => state.resume?.recommendations ?? [],
   },
   actions: {
     async hydrate(force = false) {

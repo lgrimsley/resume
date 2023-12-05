@@ -5,6 +5,7 @@ import { useAppStore } from '@/stores/app.store';
 import type { AppColor } from '@/types/app';
 import { Icon } from '@iconify/vue/dist/iconify.js';
 import { computed, ref } from 'vue';
+import DarkModeToggle from './DarkModeToggle.vue';
 
 const appColor = computed(() => useAppStore().getAppColor);
 const palletVisible = ref(false);
@@ -30,5 +31,8 @@ const toggleJson = () => {
         <button @click="toggleJson" class="z-10">
             <Icon icon="lucide:file-json" class="dark:text-white text-black" width="32px" />
         </button>
+        <div class="relaive w-24 h-8 -ml-8">
+            <DarkModeToggle class="scale-[30%] -mt-8" />
+        </div>
     </div>
 </template>

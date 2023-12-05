@@ -119,19 +119,85 @@
       "company": "Metabolic",
       "email": "marc@stockman.com",
       "phone": "910-274-8403",
-      "linkedin": "https://linkedin.com/in/marc-stockman",
+      "linkedin": "https://linkedin.com/in/marcstockman",
       "relationship": "Former Employer",
+      "reference_type": "Professional"
+    },
+    {
+      "name": "Luis Mata",
+      "position": "CTO",
+      "company": "Metabolic",
+      "email": "luis@mata.com",
+      "phone": "786-286-6282",
+      "linkedin": "https://www.linkedin.com/in/cto-luis-mata/",
+      "relationship": "Former Direct Report",
+      "reference_type": "Professional"
+    },
+    {
+      "name": "Alex Sterling",
+      "position": "Senior Engineer",
+      "company": "Metabolic",
+      "email": "sterlingalex@gmail.com",
+      "phone": "330-703-5397",
+      "linkedin": "https://www.linkedin.com/in/alex-sterling-5013942b/",
+      "relationship": "Former Colleague",
+      "reference_type": "Professional"
+    },
+    {
+      "name": "Brandon Farber",
+      "position": "Senior Engineer",
+      "company": "Metabolic",
+      "email": "brandon.farber@gmail.com",
+      "phone": "910-233-5204",
+      "linkedin": "https://www.linkedin.com/in/brandonfarber/",
+      "relationship": "Former Colleague",
+      "reference_type": "Professional"
+    },
+    {
+      "name": "Angie Thompson Evjen",
+      "position": "Senior Director of UX",
+      "company": "Metabolic",
+      "email": "angiethompson7@gmail.com",
+      "phone": "602-403-7619",
+      "linkedin": "https://www.linkedin.com/in/angiethompson2",
+      "relationship": "Former Colleague",
+      "reference_type": "Professional"
+    },
+    {
+      "name": "Keith Adamson",
+      "position": "Sr. Tech Delivery Manager",
+      "company": "Metabolic",
+      "email": "kadamson96@gmail.com",
+      "phone": "843-323-5317",
+      "linkedin": "https://www.linkedin.com/in/kadamson96/",
+      "relationship": "Former Colleague",
       "reference_type": "Professional"
     }
   ],
   "recommendations": [
     {
-      "name": "Marc Stockman",
-      "position": "CEO",
+      "name": "Luis Mata",
+      "position": "CTO",
       "company": "Metabolic",
-      "email": "marc@stockman.com",
-      "linkedin": "https://linkedin.com/in/marc-stockman",
-      "summary": ""
+      "email": "luis@mata.com",
+      "linkedin": "https://www.linkedin.com/in/cto-luis-mata/",
+      "summary": "<p>As a Chief Technology Officer (CTO), one of my primary responsibilities is strategically preparing for leadership transitions within the company. In this context, Logan Grimsley would have been an exemplary choice for succeeding in a high-level technical role at Metabolic.</p><p> Since my initial interaction with Logan while collaborating with the CRO team, he has consistently demonstrated an exceptional blend of intuitive and analytical thinking. This rare combination is pivotal in making critical business and technical decisions. Logan's innate ability to navigate seamlessly between critical and creative thinking is a hallmark of effective leadership.</p><p>Logan's proficiency is not just limited to his cognitive skills. His technical expertise is remarkable, particularly in front-end design and backend development. He has shown an outstanding grasp of solid design principles and robust backend methodologies. His technical understanding and leadership skills make him an ideal candidate for a Chief Architect position in any organization.</p><p>His comprehensive skill set truly sets Logan apart, encompassing the management, leadership, mentoring, and technical prowess necessary to design and develop applications from the front end to the back end. His contributions have been instrumental in scaling the company's operations and enhancing overall efficiency. Logan's role in developing high-performance front-end applications using Nuxt 3/Vue 3 and crafting robust Laravel APIs have significantly boosted user engagement and operational efficiency. Additionally, his foresight in architecting core infrastructure and services for system reliability and scalability has been a cornerstone in the company's growth.</p><p>Logan's collaborative efforts with UX designers and leadership in creating scalable, user-centric features have improved user experience and contributed to a substantial increase in company revenue. His skills in REST APIs, system architecture, API development, and various other technologies are a testament to his versatility and depth of knowledge in the field.</p> <p>In summary, Logan Grimsley is a multifaceted professional with the necessary skills and vision to excel in a leadership role within the tech industry. His track record at Metabolic and his innate leadership qualities make him an invaluable asset for any organization looking to foster innovation and drive success.</p>"
+    },
+    {
+      "name": "Angie Thompson Evjen",
+      "position": "Senior Director of UX",
+      "company": "Metabolic",
+      "email": "angiethompson7@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/angiethompson2",
+      "summary": "<p>I had the privilege of working with with Logan for over 3 years at Metabolic, where I led the UX and product design team. During this time, Logan consistently demonstrated his exceptional skills as a full-stack developer. What truly sets Logan apart is his ability to seamlessly bridge the gap between back-end development and front-end user experience.</p><p>Logan's technical expertise is remarkable; he has the capability to create robust back-end systems while paying meticulous attention to perfecting the front-end down to the last pixel. His commitment to delivering top-notch user experiences is evident in every project we worked on together.</p><p>Plus, Logan is a dream to work with. He has an unwavering positive attitude and remains calm and composed even in the face of tight deadlines and challenging expectations. </p><p>I wholeheartedly recommend him to any organization seeking a versatile, skilled, and dedicated full-stack developer. Any team fortunate enough to have him on board will undoubtedly benefit from his expertise and positive presence.</p>"
+    },
+    {
+      "name": "Alex Sterling",
+      "position": "Senior Engineer",
+      "company": "Metabolic",
+      "email": "sterlingalex@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/alex-sterling-5013942b/",
+      "summary": "<p>Logan is a fantastic developer who is willing to dive into projects full of vague requirements or broad implementation guidelines (or none at all), take the reins to carefully define the specifics of the requirements and execute on an expert implementation that sets your project up for future success. Logan’s expertise in modern JavaScript frameworks, CSS/SCSS, PHP, SQL and more enable him to jump into a vast array of projects and perform.</p><p> Always with an eye to the future, Logan’s team chemistry and cross-functional communication skills set the business up for durable tech success. It is always a pleasure to deeply collaborate and creatively innovate with Logan as well as working completely separately with complete trust in Logan’s stewardship of any project.</p> <p>Whether you’re trying to burn down an intimidating mountain of aging tech debt or lay the dependable foundation for your tech platform, Logan’s abilities to troubleshoot, architect and deliver will always impress.</p>"
     }
   ],
   "skills": {
