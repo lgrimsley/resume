@@ -18,8 +18,8 @@ const getBorderClass = computed(() => useAppStore().getBorderClass);
    <div class="overflow-hidden relative dark:text-white">
         <div class="border-gray-200 dark:border-zinc-800 border p-7 rounded" v-for="project in data">
             <div class="flex md:flex-row flex-col gap-4">
-                <div class="md:w-96 flex flex-col gap-2 pr-4">
-                    <h2 class="text-xl font-bold uppercase">
+                <div class="md:w-96 flex flex-col gap-3 p-4">
+                    <h2 class="text-2xl font-semibold uppercase tracking-wider">
                         {{ project?.name }}
                     </h2>
                     <a :href="project.url" target="_blank" class="text-xs flex items-center gap-1 text-gray-700 dark:text-gray-200">
