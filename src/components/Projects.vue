@@ -11,21 +11,22 @@ const props = defineProps({
 });
 
 const appColor = computed(() => useAppStore().getAppColor);
+const gradientClass = computed(() => useAppStore().getGradientClass);
 </script>
 
 <template>
    <div class="overflow-hidden relative dark:text-white">
         <div class="border-gray-200 dark:border-zinc-800 border p-7 rounded" v-for="project in data">
             <div class="flex md:flex-row flex-col gap-4">
-                <div class="md:w-96 flex flex-col gap-3">
+                <div class="md:w-96 flex flex-col gap-2 pr-4">
                     <h2 class="text-xl font-bold uppercase">
                         {{ project?.name }}
                     </h2>
-                    <a :href="project.url" target="_blank" class="text-sm flex items-center gap-1 text-gray-700 dark:text-gray-200">
+                    <a :href="project.url" target="_blank" class="text-xs flex items-center gap-1 text-gray-700 dark:text-gray-200">
                         {{ project.url }} <Icon icon="majesticons:open-line" width="16px" />
                     </a>
-                    <div class="flex flex-wrap pr-4 mt-2">
-                        <span v-for="skill in project.keywords" class="bg-gradient-to-tr from-${appColor}-600 to-purple-900 text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
+                    <div class="flex flex-wrap pr-4 mt-4">
+                        <span v-for="skill in project.keywords" :class="gradientClass" class="text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
                     </div>
                 </div>
                 <div class="w-full flex flex-col gap-3">
