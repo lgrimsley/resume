@@ -34,9 +34,6 @@ const truncateSummary = (summary: string) => {
                 </h3>
                 <ul class="flex-col flex gap-2 text-sm text-right">
                     <li class="flex gap-2 items-center md:flex-row-reverse">
-                        <Icon icon="entypo:email" :class="`text-${appColor}-500`" width="16px" /> <a :href="`mailto:${recommendation.email}`">{{ recommendation.email }}</a>
-                    </li>
-                    <li class="flex gap-2 items-center md:flex-row-reverse">
                         <Icon icon="cib:linkedin" :class="`text-${appColor}-500`" width="16px" />
                         <a :href="recommendation.linkedin" target="_blank" class="flex items-center gap-1 text-gray-700 dark:text-gray-200">
                             LinkedIn

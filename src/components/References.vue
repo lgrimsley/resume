@@ -24,10 +24,10 @@ const appColor = computed(() => useAppStore().getAppColor);
                     </h3>
                     <ul class="flex-col flex gap-2 text-sm">
                         <li class="flex gap-2 items-center">
-                           <Icon icon="bi:phone" :class="`text-${appColor}-500`" width="16px" /> <a :href="`tel:${reference.phone}`">{{ reference.phone }}</a>
+                           <Icon icon="bi:phone" :class="`text-${appColor}-500`" width="16px" /> <a v-if="reference.phone" :href="`tel:${reference.phone}`">{{ reference.phone }}</a> <span v-else>Upon Request</span>
                         </li>
                         <li class="flex gap-2 items-center">
-                            <Icon icon="entypo:email" :class="`text-${appColor}-500`" width="16px" /> <a :href="`mailto:${reference.email}`">{{ reference.email }}</a>
+                            <Icon icon="entypo:email" :class="`text-${appColor}-500`" width="16px" /> <a v-if="reference.email" :href="`mailto:${reference.email}`">{{ reference.email }}</a> <span v-else>Upon Request</span>
                         </li>
                         <li class="flex gap-2 items-center">
                             <Icon icon="cib:linkedin" :class="`text-${appColor}-500`" width="16px" />
