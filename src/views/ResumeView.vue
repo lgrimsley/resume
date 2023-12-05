@@ -3,23 +3,18 @@ import Basic from '@/components/Basic.vue'
 import Information from '@/components/Information.vue'
 import Skills from '@/components/Skills.vue';
 import About from '@/components/About.vue';
-import Experience from '@/components/Experience.vue';
-import Education from '@/components/Education.vue';
-import Projects from '@/components/Projects.vue';
 import DarkModeToggle from '@/components/DarkModeToggle.vue';
 
 import { useResumeStore } from '@/stores/resume.store';
 import { useAppStore } from '@/stores/app.store';
-import { onMounted, computed } from 'vue';
+import { onMounted, computed, type Component } from 'vue';
 import Nav from '@/components/Nav.vue';
 
 const basics = computed(() => useResumeStore().getBasics);
 const information = computed(() => useResumeStore().getInformation);
 const skills = computed(() => useResumeStore().getSkills);
 const softSkills = computed(() => useResumeStore().getSoftSkills);
-const workExperience = computed(() => useResumeStore().getWorkExperience);
-const projects = computed(() => useResumeStore().getProjects);
-const education = computed(() => useResumeStore().getEducation);
+
 
 onMounted(async () => {
     await useResumeStore().hydrate();
@@ -36,7 +31,7 @@ const downloadResume = () => {
 </script>
 
 <template>
-    <main class="flex justify-center items-top md:p-8 " :class="{'dark bg-zinc-900': useAppStore().getDarkMode, 'bg-white': !useAppStore().getDarkMode}">
+    <main class="flex justify-center items-top md:p-8 min-h-screen" :class="{'dark bg-zinc-900 text-white': useAppStore().getDarkMode, 'bg-white': !useAppStore().getDarkMode}">
         <div class="grid gap-4 lg:grid-cols-3 xl:w-4/5 w-full relative">
             <!-- left col -->
             <div class="flex flex-col gap-2 justify-start">
@@ -49,10 +44,8 @@ const downloadResume = () => {
             <!-- right col -->
             <div class="space-y-5 lg:col-span-2 px-7">
                 <About v-if="basics" :basics="basics" />
-                <Nav v-if="workExperience && projects && education" :work-experience="workExperience" :projects="projects" :education="education" />
-                <Experience v-if="useAppStore().getPage === 'experience' && workExperience" :experience="workExperience" />
-                <Education v-if="useAppStore().getPage === 'education' && education" :education="education" />
-                <Projects v-if="useAppStore().getPage === 'projects' && projects" :projects="projects" />
+                <Nav />
+                <component v-if="useAppStore().getActivePage?.label" :is="useAppStore().getActivePage?.component" :data="useAppStore().getActivePage?.data" />
             </div>
             <!-- end right col -->
 

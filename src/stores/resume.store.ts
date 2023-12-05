@@ -11,6 +11,7 @@ import {
   type ResumeState,
   type Information
  } from '../types/resume';
+import { useAppStore } from './app.store';
 
 export const useResumeStore = defineStore('resume', {
   state: (): ResumeState => ({
@@ -36,6 +37,7 @@ export const useResumeStore = defineStore('resume', {
         const response = await fetch(import.meta.env.VITE_JSON_RESUME_URL);
         const resume = await response.json() as Resume;
         this.setResume(resume);
+        useAppStore().setPagesFromResume(resume);
       } catch (error) {
         console.error("Error loading resume", error);
       }

@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import { useAppStore } from '@/stores/app.store';
 import { type Skills, type SoftSkills } from '@/types/resume';
-import { type PropType } from 'vue';
+import { computed, type PropType } from 'vue';
 
 const props = defineProps({
     skills: {
@@ -10,6 +11,9 @@ const props = defineProps({
         type: Object as PropType<SoftSkills>
     }
 });
+
+const gradientClass = computed(() => useAppStore().getGradientClass);
+
 </script>
 
 <template>
@@ -18,13 +22,13 @@ const props = defineProps({
             <div v-for="list, category in skills" class="flex flex-col space-between ">
                 <h3 class="text-sm font-bold mb-4 uppercase">{{ category }}</h3>
                 <div class="flex flex-wrap">
-                    <span v-for="skill in list" class="bg-gradient-to-tr from-violet-600 to-purple-900 text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
+                    <span v-for="skill in list"  :class="gradientClass" class="text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
                 </div>
             </div>
             <div v-if="softSkills?.length">
                 <h3 class="text-sm font-bold mb-4 uppercase">Soft Skills</h3>
                 <div class="flex flex-wrap">
-                    <span v-for="skill in softSkills" class="bg-gradient-to-tr from-violet-600 to-purple-900 text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
+                    <span v-for="skill in softSkills"  :class="gradientClass" class="text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
                 </div>
             </div>
         </div>
