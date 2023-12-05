@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { type Page, type AppState, type AppColor } from '../types/app';
 import { type Resume } from '../types/resume';
+import colors from '@/colors';
 import Experience from '@/components/Experience.vue';
 import Education from '@/components/Education.vue';
 import Projects from '@/components/Projects.vue';
@@ -10,6 +11,7 @@ export const useAppStore = defineStore('app', {
         activePage: null,
         availablePages: [],
         color: getRandomColor(),
+        showJson: false,
         darkMode: (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? true : false
     }),
     getters: {
@@ -17,6 +19,7 @@ export const useAppStore = defineStore('app', {
         getActivePage: (state): Page | null => state.activePage,
         getAvailablePages: (state): Page[] => state.availablePages,
         getAppColor: (state): AppColor => state.color,
+        getShowJson: (state): boolean => state.showJson,
         getGradientClass: (state): string => {
             return `bg-gradient-to-tr from-${state.color}-600 to-${state.color}-900`;
         },
@@ -67,16 +70,14 @@ export const useAppStore = defineStore('app', {
         },
         setColor(color: AppColor) {
             this.color = color;
+        },
+        setShowJson(showJson: boolean) {
+            this.showJson = showJson;
         }
     }
 });
 
 function getRandomColor(): AppColor {
-    const colors = [
-        'slate', 'gray', 'zinc', 'neutral', 'stone', 'red', 'orange', 'amber', 'yellow', 'lime', 
-        'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 
-        'fuchsia', 'pink', 'rose'
-    ];
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex] as AppColor;
 }

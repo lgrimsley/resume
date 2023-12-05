@@ -6,7 +6,7 @@ export type AppState = {
     darkMode: boolean;
     color: AppColor;
     availablePages: Page[]
-
+    showJson: boolean;
 }
 
 export type Page = {

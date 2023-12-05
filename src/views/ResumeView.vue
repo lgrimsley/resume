@@ -4,17 +4,19 @@ import Information from '@/components/Information.vue'
 import Skills from '@/components/Skills.vue';
 import About from '@/components/About.vue';
 import DarkModeToggle from '@/components/DarkModeToggle.vue';
+import ResumeJson from '@/components/ResumeJson.vue';
 
 import { useResumeStore } from '@/stores/resume.store';
 import { useAppStore } from '@/stores/app.store';
 import { onMounted, computed, type Component } from 'vue';
 import Nav from '@/components/Nav.vue';
+import Toolbar from '@/components/Toolbar.vue';
 
 const basics = computed(() => useResumeStore().getBasics);
 const information = computed(() => useResumeStore().getInformation);
 const skills = computed(() => useResumeStore().getSkills);
 const softSkills = computed(() => useResumeStore().getSoftSkills);
-
+const showJson = computed(() => useAppStore().getShowJson);
 
 onMounted(async () => {
     await useResumeStore().hydrate();
@@ -43,6 +45,7 @@ const downloadResume = () => {
 
             <!-- right col -->
             <div class="space-y-5 lg:col-span-2 px-7">
+                <Toolbar />
                 <About v-if="basics" :basics="basics" />
                 <Nav />
                 <component v-if="useAppStore().getActivePage?.label" :is="useAppStore().getActivePage?.component" :data="useAppStore().getActivePage?.data" />
@@ -51,5 +54,7 @@ const downloadResume = () => {
 
             <DarkModeToggle class="fixed bottom-4 right-4 scale-75" />
         </div>
+
+        <ResumeJson class="transition ease-in-out duration-500"  :style="showJson ? 'transform: translateX(0)' : 'transform: translateX(100vw)'" />
     </main>
 </template>
