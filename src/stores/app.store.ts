@@ -25,6 +25,9 @@ export const useAppStore = defineStore('app', {
         },
         getGradientHoverClass: (state): string => {
             return `hover:from-${state.color}-700 hover:to-${state.color}-900`;
+        },
+        getBorderClass: (state): string => {
+            return `border-${state.color}-700`;
         }
     },
     actions: {

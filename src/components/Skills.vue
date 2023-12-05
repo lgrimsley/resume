@@ -12,7 +12,7 @@ const props = defineProps({
     }
 });
 
-const gradientClass = computed(() => useAppStore().getGradientClass);
+const getBorderClass = computed(() => useAppStore().getBorderClass);
 
 </script>
 
@@ -22,13 +22,13 @@ const gradientClass = computed(() => useAppStore().getGradientClass);
             <div v-for="list, category in skills" class="flex flex-col space-between ">
                 <h3 class="text-sm font-bold mb-4 uppercase">{{ category }}</h3>
                 <div class="flex flex-wrap">
-                    <span v-for="skill in list"  :class="gradientClass" class="text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
+                    <span v-for="skill in list"  :class="getBorderClass" class="border text-black dark:text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
                 </div>
             </div>
             <div v-if="softSkills?.length">
                 <h3 class="text-sm font-bold mb-4 uppercase">Soft Skills</h3>
                 <div class="flex flex-wrap">
-                    <span v-for="skill in softSkills"  :class="gradientClass" class="text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
+                    <span v-for="skill in softSkills"  :class="getBorderClass" class="border text-black dark:text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
                 </div>
             </div>
         </div>

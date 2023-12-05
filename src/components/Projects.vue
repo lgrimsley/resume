@@ -11,7 +11,7 @@ const props = defineProps({
 });
 
 const appColor = computed(() => useAppStore().getAppColor);
-const gradientClass = computed(() => useAppStore().getGradientClass);
+const getBorderClass = computed(() => useAppStore().getBorderClass);
 </script>
 
 <template>
@@ -25,8 +25,8 @@ const gradientClass = computed(() => useAppStore().getGradientClass);
                     <a :href="project.url" target="_blank" class="text-xs flex items-center gap-1 text-gray-700 dark:text-gray-200">
                         {{ project.url }} <Icon icon="majesticons:open-line" width="16px" />
                     </a>
-                    <div class="flex flex-wrap pr-4 mt-4">
-                        <span v-for="skill in project.keywords" :class="gradientClass" class="text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
+                    <div class="flex flex-wrap mt-4">
+                        <span v-for="skill in project.keywords" :class="getBorderClass" class="border text-black dark:text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
                     </div>
                 </div>
                 <div class="w-full flex flex-col gap-3">
