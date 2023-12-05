@@ -111,28 +111,7 @@
       "keywords": ["Jira", "Automation", "LLM", "Nuxt 3", "Vue 3", "TailwindCSS", "Laravel 10", "MySQL", "AWS"]
     }
   ],
-  "education": [
-    {
-      "institution": "University of Louisville",
-      "area": "Computer Science",
-      "studyType": "Bachelor of Science",
-      "startDate": "2011-08",
-      "endDate": "2013-05",
-      "gpa": "3.8",
-      "courses": [
-        "Data Structures",
-        "Algorithms",
-        "Operating Systems",
-        "Computer Architecture",
-        "Software Engineering",
-        "Database Systems",
-        "Programming Languages",
-        "Computer Networks",
-        "Discrete Mathematics",
-        "Calculus"
-      ]
-    }
-  ],
+  "education": [],
   "references": [
     {
       "name": "Marc Stockman",

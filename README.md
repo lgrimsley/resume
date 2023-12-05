@@ -158,4 +158,4 @@ The application expects the resume data in a specific JSON format. Below is the 
 Ensure your resume data conforms to this structure for proper rendering in the application.
 
 
-###That's it! Enjoy, and please give credit if you use my resume app.
+That's it! Enjoy, and please give credit if you use my resume app.
