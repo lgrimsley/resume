@@ -14,6 +14,7 @@ const appColor = computed(() => useAppStore().getAppColor);
 const expandedStates = ref(props.data?.map(() => false));
 
 const toggleSummary = (index: number) => {
+    if (!expandedStates.value) { return; }
     expandedStates.value[index] = !expandedStates.value[index];
 };
 
@@ -47,7 +48,7 @@ const truncateSummary = (summary: string) => {
                 <Icon icon="fontisto:quote-left" :class="`absolute text-${appColor}-800`" width="24px" /> 
                 <p v-html="(expandedStates && expandedStates[index]) ? recommendation.summary : truncateSummary(recommendation.summary)" class="flex-col flex gap-4 px-12 text-ellipsis overflow-hidden"></p>
                 <button @click="toggleSummary(index)" class="absolute bottom-0 right-20 underline text-sm">
-                    {{ expandedStates[index] ? 'Show Less' : 'Read More' }}
+                    {{ expandedStates && expandedStates[index] ? 'Show Less' : 'Read More' }}
                 </button>
             </div>
         </div>

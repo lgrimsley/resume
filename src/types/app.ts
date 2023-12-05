@@ -1,5 +1,5 @@
 import type { Component } from "vue";
-import type { Education, Project, WorkExperience } from "./resume";
+import type { Education, Project, WorkExperience, Reference, Recommendation } from "./resume";
 
 export type AppState = {
     activePage: Page | null;
@@ -12,7 +12,7 @@ export type AppState = {
 export type Page = {
     key: 'experience' | 'projects' | 'education' | 'references' | 'recommendations';
     label: string;
-    data: WorkExperience[] | Project[] | Education[];
+    data: WorkExperience[] | Project[] | Education[] | Reference[] | Recommendation[];
     component: Component;
 }
 
