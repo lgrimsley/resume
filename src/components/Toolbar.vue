@@ -45,7 +45,7 @@ const togglePallet = () => {
 
 <template>
     <div class="flex gap-4 lg:justify-end justify-start w-full items-center absolute lg:relative  left-4 top-3 z-10">
-        <div :class="borderClass"  class=" border-2 transition ease duration-500 overflow-hidden absolute  w-80 p-4 bg-white dark:bg-zinc-900  rounded-lg shadow-xl top-10 -left-2 lg:left-auto lg:right-36 margin`" :style="palletVisible ? 'transform: translatex(0); height: auto; opacity: 100%': 'transform: translateY(-100px); opacity: 0'">
+        <div :class="borderClass"  class=" border-2 transition ease duration-500 overflow-hidden absolute  w-80 p-4 bg-white dark:bg-zinc-900  rounded-lg shadow-xl top-10 -left-2 lg:left-auto lg:right-36 margin`" :style="palletVisible ? 'transform: translatex(0); height: auto; opacity: 100%': 'transform: translateY(-100px); opacity: 0; pointer-events: none;'">
             <div class="flex justify-between items-center">
                 <h5 class="flex items-center gap-2 pl-2 pb-2">
                     <Icon icon="pepicons-pencil:paint-pallet" width="18px" /> 
