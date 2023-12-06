@@ -12,7 +12,7 @@ const appColor = computed(() => appStore.getAppColor);
 const borderClass = computed(() => appStore.getBorderClass);
 const isDragging = ref(false);
 const selectedColorIndex = ref(colors.indexOf(appStore.getAppColor));
-const colorElementsRef = ref([]);
+const colorElementsRef = ref<Element[]>([]);
 
 const startDrag = (color: AppColor) => {
     setAppColor(color);
