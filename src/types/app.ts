@@ -7,6 +7,7 @@ export type AppState = {
     color: AppColor;
     availablePages: Page[]
     showJson: boolean;
+    gtagActive: boolean;
 }
 
 export type Page = {

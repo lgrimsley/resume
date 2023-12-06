@@ -15,6 +15,7 @@ export const useAppStore = defineStore('app', {
         availablePages: [],
         color: getRandomColor(),
         showJson: false,
+        gtagActive: (import.meta.env.VITE_GA_ID && import.meta.env.VITE_GA_ID !== ''),
         darkMode: (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? true : false
     }),
     getters: {
@@ -31,14 +32,17 @@ export const useAppStore = defineStore('app', {
         },
         getBorderClass: (state): string => {
             return `border-${state.color}-700`;
-        }
+        },
+        getIsGtagActive: (state): boolean => state.gtagActive
     },
     actions: {
         setDarkMode(darkMode: boolean) {
             this.darkMode = darkMode;
         },
         setActivePage(page: Page) {
-            pageview({"page_title": page.label, "page_path": "/"+page.key});
+            if (this.getIsGtagActive) {
+                pageview({"page_title": page.label, "page_path": "/"+page.key});
+            }
             this.activePage = page;
         },
         setAvailablePages(pages: Page[]) {

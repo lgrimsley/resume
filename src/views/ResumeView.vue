@@ -9,6 +9,7 @@ import Footer from '@/components/Footer.vue';
 import { useResumeStore } from '@/stores/resume.store';
 import { useAppStore } from '@/stores/app.store';
 import { onMounted, computed } from 'vue';
+import { event } from 'vue-gtag';
 import Nav from '@/components/Nav.vue';
 import Toolbar from '@/components/Toolbar.vue';
 
@@ -29,6 +30,9 @@ const downloadResume = () => {
     link.download = basics.value.resume_url;
     link.target = '_blank';
     link.click();
+    if (useAppStore().getIsGtagActive) {
+        event('download', {'event_category': 'engagement', 'event_label': 'download_resume'});
+    }
 }
 </script>
 

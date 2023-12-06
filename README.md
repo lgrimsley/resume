@@ -32,9 +32,11 @@ Before running the application, you need to create an `.env` file in the project
 
 ```env
 VITE_JSON_RESUME_URL="path/to/resume.json"
+VITE_GA_ID="G-XXXXXXXXXX"
 ```
 
 Replace `"path/to/resume.json"` with the actual path to your JSON resume file.
+Replace `"G-XXXXXXXXXX"` with your Google Analytics Measurement ID (Optional)
 
 
 ### JSON Resume Structure
