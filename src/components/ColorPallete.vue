@@ -12,14 +12,18 @@ const appColor = computed(() => appStore.getAppColor);
 const borderClass = computed(() => appStore.getBorderClass);
 const isDragging = ref(false);
 const selectedColorIndex = ref(colors.indexOf(appStore.getAppColor));
+const colorElementsRef = ref([]);
 
 const startDrag = (color: AppColor) => {
     setAppColor(color);
     isDragging.value = true;
 };
 
-const onColorHover = (color: AppColor) => {
+const onColorHover = (color: AppColor, event: Event | TouchEvent, touch = false) => {
     if (isDragging.value) {
+        if (touch) {
+            color = getColorByTouchEvent(event as TouchEvent) ?? color;
+        }
         setAppColor(color);
     }
 };
@@ -45,6 +49,22 @@ const iconPosition = computed(() => {
 const preventDefaultDrag = (event: Event) => {
     event.preventDefault();
 };
+
+const getColorByTouchEvent = (event: TouchEvent) => {
+    const touch = event.touches[0];
+    const touchedElement = document.elementFromPoint(touch.clientX, touch.clientY);
+
+    if (touchedElement) {
+        // Find the index of the touched element in the array of color elements
+        const touchedIndex = colorElementsRef.value?.indexOf(touchedElement);
+        if (touchedIndex !== -1) {
+            const selectedColor = colors[touchedIndex];
+            return selectedColor as AppColor;
+        }
+    }
+
+    return null;
+};
 </script>
 
 <template>
@@ -58,15 +78,21 @@ const preventDefaultDrag = (event: Event) => {
                 <Icon icon="zondicons:close-outline" class="dark:text-white text-black -mt-1" width="24px" />
             </button>
         </div>
-        
+
         <div class="flex justify-center lg:justify-start gap-0 rounded w-full mt-4 mb-1 h-10 "
              @mouseup="endDrag"
-             @mouseleave="endDrag">
+             @mouseleave="endDrag"
+             @touchend="endDrag"
+             >
             <span v-for="color in colors" 
                 @mousedown="startDrag(color as AppColor)"
-                @mousemove="onColorHover(color as AppColor)"
+                @mousemove="onColorHover(color as AppColor, $event, true)"
+                @touchstart.prevent="startDrag(color as AppColor)"
+                @touchmove="onColorHover(color as AppColor, $event, true)"
+                ref="colorElementsRef"
                 :class="`bg-gradient-to-tr from-${color}-600 to-${color}-900 w-full h-full cursor-pointer flex items-center justify-center`"
                  @dragstart.prevent="preventDefaultDrag"
+                 @touchcancel="endDrag"
             >
             </span>
         </div>
