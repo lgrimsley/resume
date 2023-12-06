@@ -23,7 +23,7 @@ const getBorderClass = computed(() => useAppStore().getBorderClass);
             <div v-for="list, category in skills" class="flex flex-col space-between ">
                 <h3 class="text-sm font-bold mb-4 uppercase">{{ category }}</h3>
                 <div class="flex flex-wrap">
-                    <SkillSmall v-for="skill in softSkills" :skill="skill" />
+                    <SkillSmall v-for="skill in list" :skill="skill" />
                 </div>
             </div>
             <div v-if="softSkills?.length">
