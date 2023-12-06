@@ -86,7 +86,7 @@ const getColorByTouchEvent = (event: TouchEvent) => {
              >
             <span v-for="color in colors" 
                 @mousedown="startDrag(color as AppColor)"
-                @mousemove="onColorHover(color as AppColor, $event, true)"
+                @mousemove="onColorHover(color as AppColor, $event)"
                 @touchstart.prevent="startDrag(color as AppColor)"
                 @touchmove="onColorHover(color as AppColor, $event, true)"
                 ref="colorElementsRef"
