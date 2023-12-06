@@ -1,5 +1,3 @@
 export default [
-  'slate', 'red', 'orange', 'amber', 'yellow', 'lime', 
-  'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 
-  'fuchsia', 'pink', 'rose'
+  'stone','zinc', 'gray', 'slate', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal',
 ];
