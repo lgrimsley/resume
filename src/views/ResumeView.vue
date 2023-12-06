@@ -8,7 +8,7 @@ import Footer from '@/components/Footer.vue';
 
 import { useResumeStore } from '@/stores/resume.store';
 import { useAppStore } from '@/stores/app.store';
-import { onMounted, computed, type Component } from 'vue';
+import { onMounted, computed } from 'vue';
 import Nav from '@/components/Nav.vue';
 import Toolbar from '@/components/Toolbar.vue';
 

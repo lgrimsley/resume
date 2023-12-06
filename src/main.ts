@@ -10,9 +10,7 @@ app.use(createPinia())
 app.use(router)
 if (import.meta.env.VITE_GA_ID && import.meta.env.VITE_GA_ID !== '') {   
     app.use(VueGtag, {
-        appName: "Resume",
-        pageTrackerScreenviewEnabled: true,
         config: { id: import.meta.env.VITE_GA_ID }
-    })
+    }, router)
 }
 app.mount('#app')

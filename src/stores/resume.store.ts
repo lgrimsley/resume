@@ -14,6 +14,7 @@ import {
   type Recommendation
  } from '../types/resume';
 import { useAppStore } from './app.store';
+import { pageview } from 'vue-gtag';
 
 export const useResumeStore = defineStore('resume', {
   state: (): ResumeState => ({

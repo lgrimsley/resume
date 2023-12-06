@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { pageview } from 'vue-gtag';
 import { type Page, type AppState, type AppColor } from '../types/app';
 import { type Resume } from '../types/resume';
 import colors from '@/colors';
@@ -37,6 +38,7 @@ export const useAppStore = defineStore('app', {
             this.darkMode = darkMode;
         },
         setActivePage(page: Page) {
+            pageview({"page_title": page.label, "page_path": "/"+page.key});
             this.activePage = page;
         },
         setAvailablePages(pages: Page[]) {
