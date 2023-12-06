@@ -23,7 +23,7 @@ const appColor = computed(() => useAppStore().getAppColor);
 
 <template>
     <div class="overflow-hidden relative dark:text-white flex flex-col gap-8">
-        <div class="border-gray-200 dark:border-zinc-800 border px-12 py-9 rounded" v-for="job in data">
+        <div class="bg-gray-100/30 dark:bg-zinc-800/10 p-6 md:p-8 rounded" v-for="job in data">
             <div class="flex flex-col md:flex-row md:gap-1 gap-4">
                 <div class="md:w-96 flex flex-col gap-3 pr-2">
                     <img v-if="job?.logo_url" :src="job.logo_url" class="" />
@@ -34,6 +34,7 @@ const appColor = computed(() => useAppStore().getAppColor);
                         {{ job.url }} <Icon icon="majesticons:open-line" width="14px" />
                     </a>
                     <div class="mt-4">
+                        <h5 class="font-semibold mb-3 uppercase tracking-wider">{{ job.positions.length ? (job.positions.length > 1 ? 'Roles' : 'Role') : '' }}</h5>
                         <h5 v-for="position in job.positions" class="text-lg mb-2 flex flex-col font-light tracking-wide">
                             {{ position.position }} 
                             <small class="-ml-1 text-zinc-600 dark:text-gray-300 font-normal flex items-center gap-1">
@@ -44,7 +45,7 @@ const appColor = computed(() => useAppStore().getAppColor);
                     </div>
                 </div>
                 <div class="w-full">
-                    <p class="mb-2 text-lg" v-if="job?.summary">
+                    <p class="mb-2 text-lg font-light" v-if="job?.summary">
                         {{ job.summary }}
                     </p>
                     <div v-if="job?.bullets.length">

@@ -45,7 +45,7 @@ const togglePallet = () => {
 </script>
 
 <template>
-    <div class="flex gap-4 lg:justify-end justify-start w-full items-center absolute lg:relative  left-4 top-3 z-10">
+    <div class="flex gap-4 lg:justify-end justify-start w-full items-center absolute lg:relative  left-4 top-3 z-10 pr-8">
         <ColorPallete @close="togglePallet" :style="palletVisible ? 'transform: translatex(0); height: auto; opacity: 100%': 'transform: translateY(-100px); opacity: 0; pointer-events: none;'" />
         <button @click="togglePallet" class="z-10 mt-1">
             <Icon icon="pepicons-pencil:paint-pallet" class="dark:text-white text-white lg:text-black lg:scale-100 scale-75" width="32px" :class="{'shake': isWiggling}"  />

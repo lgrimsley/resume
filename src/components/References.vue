@@ -15,7 +15,7 @@ const appColor = computed(() => useAppStore().getAppColor);
 
 <template>
     <div class="overflow-hidden relative dark:text-white flex flex-wrap flex-col md:flex-row gap-2 ">
-        <div class="border-gray-200 dark:border-zinc-800 border p-7 rounded flex-grow min-w-[49.5%]" v-for="reference in data">
+        <div class="bg-gray-100/30 dark:bg-zinc-800/10 p-7 rounded flex-grow min-w-[49.5%]" v-for="reference in data">
             <div class="flex space-between">
                 <div class="flex-col flex-grow">
                     <h3 class="font-semibold text-xl mb-4">

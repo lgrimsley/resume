@@ -11,6 +11,7 @@ module.exports = {
         ...generateSafelist('bg-gradient-to-tr', 'to', '900'),
         ...generateSafelist('border', 'border', '600'),
         ...generateSafelist('border', 'border', '700'),
+        ...generateSafelist('border', 'hover:border', '700'),
         ...generateSafelist('', 'text', '800'),
         ...generateSafelist('', 'text', '500'),
       ],

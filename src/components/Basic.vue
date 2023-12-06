@@ -48,7 +48,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="dark:bg-zinc-900 md:rounded-tr md:rounded-tl dark:text-white overflow-hidden relative">
+    <div class="bg-gray-100/30 dark:bg-zinc-800/10 md:rounded-tr md:rounded-tl dark:text-white overflow-hidden relative">
         <!-- <div class="h-32" style="background-image: url('/abstract_bg.png'); background-position: 0% 90%;"></div> -->
         <div :class="gradientClass" class="h-32 w-full flex-col items-end flex justify-between transition duration-500 ease-in-out">
             <span class="border border-white text-white font-semibold dark:border-gray-200 dark:text-gray-200 px-2 py-1 text-xs rounded mr-3 mt-3">{{ basics?.status }}</span>
@@ -72,7 +72,7 @@ onUnmounted(() => {
                 <div class="xl:text-2xl lg:text-xl text-2xl  mb-1 font-bold text-zinc-800 dark:text-zinc-100 ">{{ basics?.name }}</div>
                 <div class="xl:text-xl lg:text-md text-lg text-gray-600 dark:text-gray-300">{{ basics?.label }}</div>
             </div>
-            <button ref="downloadButton"  @mouseover="buttonHover = true" @mouseleave="buttonHover = false" :class="[gradientClass, gradientHoverClass]" class="w-full justify-center flex group text-white items-center mt-2 py-4 md:rounded font-semibold relative" @click="$emit('download-resume')">
+            <button ref="downloadButton"  @mouseover="buttonHover = true" @mouseleave="buttonHover = false" :class="[gradientClass, gradientHoverClass]" class="w-full justify-center flex group text-white items-center mt-2 py-4 md:rounded-br md:rounded-bl font-semibold relative" @click="$emit('download-resume')">
                 <span  :style="buttonHover ? moveRightStyle : ''" ref="downloadText" class="flex gap-2 items-center transition ease-in-out delay-150">
                     Download Resume
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

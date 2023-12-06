@@ -18,7 +18,7 @@ const getBorderClass = computed(() => useAppStore().getBorderClass);
 </script>
 
 <template>
-   <div class="py-7 overflow-hidden relative dark:text-white">
+   <div class="bg-gray-100/30 dark:bg-zinc-800/10 mt-0 lg:mt-8 p-6 lg:p-7 overflow-hidden relative dark:text-white">
         <div class="flex flex-col gap-6">
             <div v-for="list, category in skills" class="flex flex-col space-between ">
                 <h3 class="text-sm font-bold mb-4 uppercase">{{ category }}</h3>

@@ -42,17 +42,19 @@ const downloadResume = () => {
             <div class="grid gap-4 lg:grid-cols-3 xl:w-5/6 w-screen relative">
                 
                 <!-- left col -->
-                <div class="flex flex-col gap-2 justify-start w-screen md:w-full">
+                <div class="flex flex-col gap-4 justify-start w-screen md:w-full">
                     <Basic v-if="basics" :basics="basics" @download-resume="downloadResume" />
-                    <Information v-if="information" :information="information" class="px-7 lg:px-0" />
-                    <Skills v-if="skills && softSkills" :skills="skills" :soft-skills="softSkills" class="px-7 lg:px-0" />
+                    <Information v-if="information" :information="information" />
+                    <Skills v-if="skills && softSkills" :skills="skills" :soft-skills="softSkills"  />
                 </div>
                 <!-- end left col -->
                 
                 <!-- right col -->
-                <div class="space-y-5 lg:col-span-2 px-7 md:pr-4 md:pl-7 w-screen lg:w-full">
-                    <Toolbar />
-                    <About v-if="basics" :basics="basics" />
+                <div class="lg:col-span-2 lg:pr-4 lg:pl-7 w-screen lg:w-full">
+                    <div class="bg-gray-100/30 dark:bg-zinc-800/10">
+                        <Toolbar />
+                        <About v-if="basics" :basics="basics" />
+                    </div>
                     <Nav />
                     <Transition name="fade" mode="out-in" appear :duration="150">
                         <component v-if="useAppStore().getActivePage?.label" :is="useAppStore().getActivePage?.component" :data="useAppStore().getActivePage?.data" />
