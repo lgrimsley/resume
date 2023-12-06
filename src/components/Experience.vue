@@ -23,11 +23,11 @@ const appColor = computed(() => useAppStore().getAppColor);
 
 <template>
     <div class="overflow-hidden relative dark:text-white flex flex-col gap-8">
-        <div class="border-gray-200 dark:border-zinc-800 border p-7 rounded" v-for="job in data">
+        <div class="border-gray-200 dark:border-zinc-800 border px-12 py-9 rounded" v-for="job in data">
             <div class="flex flex-col md:flex-row md:gap-1 gap-4">
-                <div class="md:w-96 flex flex-col gap-3 p-4">
+                <div class="md:w-96 flex flex-col gap-3 pr-2">
                     <img v-if="job?.logo_url" :src="job.logo_url" class="" />
-                    <h2 class="text-2xl font-semibold uppercase tracking-wider">
+                    <h2 class="text-3xl font-semibold uppercase tracking-wider">
                         {{ job?.company }}
                     </h2>
                     <a :href="job.url" target="_blank" class="text-xs flex items-center gap-1 text-gray-700 dark:text-gray-200">
@@ -36,10 +36,10 @@ const appColor = computed(() => useAppStore().getAppColor);
                     <div class="mt-4">
                         <h5 v-for="position in job.positions" class="text-lg mb-2 flex flex-col font-light tracking-wide">
                             {{ position.position }} 
-                            <small class="ml-1 text-gray-500 dark:text-gray-300 font-normal flex items-center gap-1">
+                            <small class="-ml-1 text-zinc-600 dark:text-gray-300 font-normal flex items-center gap-1">
                                 <Icon icon="ic:baseline-turn-left" width="22px" class="rotate-180 -mt-1" />
-                                 {{ formatDate(position.startDate) }} - {{ formatDate(position.endDate) }} 
-                                </small>
+                                {{ formatDate(position.startDate) }} - {{ formatDate(position.endDate) }} 
+                            </small>
                         </h5>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ const appColor = computed(() => useAppStore().getAppColor);
                         {{ job.summary }}
                     </p>
                     <div v-if="job?.bullets.length">
-                        <h5 class="font-semibold mb-4 uppercase tracking-wider">Responsibilities</h5>
+                        <h5 class="font-semibold mb-3 uppercase tracking-wider">Responsibilities</h5>
                         <ul  class="pl-4">
                             <li v-for="bullet in job.bullets" class=" mb-3 list-none relative">
                                 <Icon icon="majesticons:chevron-right" width="18px" :class="`absolute -left-5 top-0.5 text-${appColor}-500 `" />

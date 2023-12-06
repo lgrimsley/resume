@@ -42,7 +42,7 @@ const truncateSummary = (summary: string) => {
                 </ul>
             </div>
             <div class="flex pt-4 mt-4 md:mt-0 pb-6 gap-1 relative">
-                <Icon icon="fontisto:quote-left" :class="`absolute text-${appColor}-800`" width="24px" /> 
+                <Icon icon="fontisto:quote-left" :class="`absolute text-${appColor}-800 -ml-4 md:ml-0`" width="24px" /> 
                 <p v-html="(expandedStates && expandedStates[index]) ? recommendation.summary : truncateSummary(recommendation.summary)" class="flex-col flex gap-4 md:px-12 px-4 text-ellipsis overflow-hidden z-2 relative"></p>
                 <button @click="toggleSummary(index)" class="absolute bottom-0 right-20 underline text-sm">
                     {{ expandedStates && expandedStates[index] ? 'Show Less' : 'Read More' }}

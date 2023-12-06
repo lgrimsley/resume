@@ -45,7 +45,7 @@ const togglePallet = () => {
 
 <template>
     <div class="flex gap-4 lg:justify-end justify-start w-full items-center absolute lg:relative  left-4 top-3 z-10">
-        <div :class="borderClass"  class=" border-2 transition ease duration-500 overflow-hidden absolute  w-72 p-2 bg-white dark:bg-zinc-900  rounded-lg shadow-xl top-10 -left-2 lg:left-auto lg:right-36" :style="palletVisible ? 'transform: translatex(0); height: auto; opacity: 100%': 'transform: translateY(-100px); opacity: 0'">
+        <div :class="borderClass"  class=" border-2 transition ease duration-500 overflow-hidden absolute  w-80 p-4 bg-white dark:bg-zinc-900  rounded-lg shadow-xl top-10 -left-2 lg:left-auto lg:right-36 margin`" :style="palletVisible ? 'transform: translatex(0); height: auto; opacity: 100%': 'transform: translateY(-100px); opacity: 0'">
             <div class="flex justify-between items-center">
                 <h5 class="flex items-center gap-2 pl-2 pb-2">
                     <Icon icon="pepicons-pencil:paint-pallet" width="18px" /> 
@@ -55,22 +55,22 @@ const togglePallet = () => {
                     <Icon icon="zondicons:close-outline" class="dark:text-white text-black -mt-1" width="24px" />
                 </button>
             </div>
-            <div class="flex flex-wrap justify-center lg:justify-start gap-1 rounded p-1">
+            <div class="flex justify-center lg:justify-start gap-0 rounded p-1 mt-2">
 
                 <span v-for="color in colors" 
                 @click="useAppStore().setColor(color as AppColor)" 
-                :class="`bg-gradient-to-tr from-${color}-600 to-${color}-900 lg:w-8 lg:h-8 w-12 h-12 cursor-pointer rounded-sm flex items-center justify-center`"
-                ><Icon icon="carbon:dot-mark" class="text-white transition ease-in-out" width="24px" :class="color == appColor ? 'opacity-100' : 'opacity-10'" /></span>
+                :class="`bg-gradient-to-tr from-${color}-600 to-${color}-900 w-full h-8 cursor-pointer flex items-center justify-center`"
+                ><Icon icon="bxs:up-arrow" class="dark:text-white text-zinc-900 transition ease-in-out absolute bottom-2" width="12px" v-if="color == appColor" /></span>
             </div>
         </div>
         <button @click="togglePallet" class="z-10 mt-1">
-            <Icon icon="pepicons-pencil:paint-pallet" class="dark:text-white text-white lg:text-black" width="32px" :class="{'shake': isWiggling}"  />
+            <Icon icon="pepicons-pencil:paint-pallet" class="dark:text-white text-white lg:text-black lg:scale-100 scale-75" width="32px" :class="{'shake': isWiggling}"  />
         </button>
         <button @click="toggleJson" class="z-10 mt-1">
-            <Icon icon="lucide:file-json" class="dark:text-white text-white lg:text-black" width="32px" />
+            <Icon icon="lucide:file-json" class="dark:text-white text-white lg:text-black lg:scale-100 scale-75" width="32px" />
         </button>
         <div class="relaive w-24 h-8 -ml-8">
-            <DarkModeToggle class="scale-[30%] -mt-8" />
+            <DarkModeToggle class="lg:scale-[30%] scale-[20%] -mt-8" />
         </div>
     </div>
 </template>
