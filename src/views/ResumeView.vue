@@ -36,6 +36,7 @@ const downloadResume = () => {
     <main class=" min-h-screen w-screen overflow-x-hidden" :class="{'dark bg-zinc-900 text-white': useAppStore().getDarkMode, 'bg-white': !useAppStore().getDarkMode}">
         <div class="flex justify-center items-top lg:p-8">
             <div class="grid gap-4 lg:grid-cols-3 xl:w-5/6 w-screen relative">
+                
                 <!-- left col -->
                 <div class="flex flex-col gap-2 justify-start w-screen md:w-full">
                     <Basic v-if="basics" :basics="basics" @download-resume="downloadResume" />
@@ -52,9 +53,9 @@ const downloadResume = () => {
                     <Transition name="fade" mode="out-in" appear :duration="150">
                         <component v-if="useAppStore().getActivePage?.label" :is="useAppStore().getActivePage?.component" :data="useAppStore().getActivePage?.data" />
                     </Transition>
-
                 </div>
                 <!-- end right col -->
+
             </div>
         </div>
         <footer>

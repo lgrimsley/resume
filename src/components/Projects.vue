@@ -3,6 +3,7 @@ import { useAppStore } from '@/stores/app.store';
 import { type Project } from '@/types/resume';
 import { Icon } from '@iconify/vue/dist/iconify.js';
 import { computed, type PropType } from 'vue';
+import SkillSmall from './SkillSmall.vue';
 
 const props = defineProps({
     data: {
@@ -26,7 +27,7 @@ const getBorderClass = computed(() => useAppStore().getBorderClass);
                         {{ project.url }} <Icon icon="majesticons:open-line" width="16px" />
                     </a>
                     <div class="flex flex-wrap mt-4">
-                        <span v-for="skill in project.keywords" :class="getBorderClass" class="border text-black dark:text-white rounded-sm px-3 py-1 text-xs font-semibold text-gray-800 mr-2 mb-2 dark:text-gray-100 ">{{ skill }}</span>
+                        <SkillSmall v-for="skill in project.keywords" :skill="skill" />
                     </div>
                 </div>
                 <div class="w-full flex flex-col gap-3">
