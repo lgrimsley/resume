@@ -26,7 +26,7 @@ const truncateSummary = (summary: string) => {
 
 <template>
     <div class="overflow-hidden relative dark:text-white flex flex-wrap flex-col md:flex-row gap-4 ">
-        <div class="border-gray-200 dark:border-zinc-800 border p-7 rounded w-full" v-for="recommendation, index in data">
+        <div class="border-gray-200 dark:border-zinc-800 border p-4 md:p-7 rounded w-full" v-for="recommendation, index in data">
             <div class="flex md:justify-between items-baseline w-full md:px-12 md:flex-row flex-col">
                 <h3 class="font-semibold text-xl mb-4 ">
                     {{ recommendation.name }} <br/>
@@ -41,11 +41,14 @@ const truncateSummary = (summary: string) => {
                     </li>
                 </ul>
             </div>
-            <div class="flex pt-4 mt-4 md:mt-0 pb-6 gap-1 relative">
-                <Icon icon="fontisto:quote-left" :class="`absolute text-${appColor}-800 -ml-4 md:ml-0`" width="24px" /> 
-                <p v-html="(expandedStates && expandedStates[index]) ? recommendation.summary : truncateSummary(recommendation.summary)" class="flex-col flex gap-4 md:px-12 px-4 text-ellipsis overflow-hidden z-2 relative"></p>
-                <button @click="toggleSummary(index)" class="absolute bottom-0 right-20 underline text-sm">
+            <div class="flex flex-col justify-center items-center">
+                <div class="flex pt-4 mt-4 md:mt-0 pb-6 gap-1 relative">
+                    <Icon icon="fontisto:quote-left" :class="`absolute text-${appColor}-500 -ml-4 md:ml-0 hidden md:block`" width="24px" /> 
+                    <p v-html="(expandedStates && expandedStates[index]) ? recommendation.summary : truncateSummary(recommendation.summary)" class="flex-col flex gap-4 md:px-12 text-ellipsis overflow-hidden z-2 relative"></p>
+                </div>
+                <button @click="toggleSummary(index)" class="text-xs flex flex-col justify-center items-center gap-1" :class="{'flex-col-reverse': expandedStates && expandedStates[index] }">
                     {{ expandedStates && expandedStates[index] ? 'Show Less' : 'Read More' }}
+                    <Icon icon="fe:arrow-up" width="24px" :class="[{'rotate-180': expandedStates && !expandedStates[index] }, `transition ease-in-out duration-100 text-${appColor}-500`]" />
                 </button>
             </div>
         </div>
