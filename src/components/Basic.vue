@@ -69,11 +69,11 @@ onUnmounted(() => {
         <div class="pt-4 relative">
             <img v-if="basics?.image" :src="basics.image" alt="Avatar" class="absolute w-32 h-32 rounded-full left-6 -top-16 border-2 border-white dark:border-zinc-900" />
             <div class="flex flex-col w-full items-end mb-6 xl:pr-8 lg:pr-1 pr-6 z-3 relative">
-                <div class="xl:text-2xl lg:text-xl text-2xl  mb-1 font-bold text-zinc-800 dark:text-zinc-100 ">{{ basics?.name }}</div>
-                <div class="xl:text-xl lg:text-md text-lg text-gray-600 dark:text-gray-300">{{ basics?.label }}</div>
+                <div class="xl:text-2xl lg:text-xl text-2xl  mb-1 font-bold text-zinc-800 dark:text-zinc-100 tracking-wider">{{ basics?.name }}</div>
+                <div class="xl:text-xl lg:text-md text-lg text-gray-600 dark:text-gray-300 tracking-wider">{{ basics?.label }}</div>
             </div>
             <button ref="downloadButton"  @mouseover="buttonHover = true" @mouseleave="buttonHover = false" :class="[gradientClass, gradientHoverClass]" class="w-full justify-center flex group text-white items-center mt-2 py-4 md:rounded-br md:rounded-bl font-semibold relative" @click="$emit('download-resume')">
-                <span  :style="buttonHover ? moveRightStyle : ''" ref="downloadText" class="flex gap-2 items-center transition ease-in-out delay-150">
+                <span  :style="buttonHover ? moveRightStyle : ''" ref="downloadText" class="flex gap-2 items-center transition ease-in-out delay-150 tracking-wider">
                     Download Resume
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
