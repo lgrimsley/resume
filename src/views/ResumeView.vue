@@ -37,7 +37,7 @@ const downloadResume = () => {
 </script>
 
 <template>
-    <main class=" min-h-screen w-screen overflow-x-hidden" :class="{'dark bg-zinc-900 text-white': useAppStore().getDarkMode, 'bg-white': !useAppStore().getDarkMode}">
+    <main class=" min-h-screen max-w-screen overflow-x-hidden" :class="{'dark bg-zinc-900 text-white': useAppStore().getDarkMode, 'bg-white': !useAppStore().getDarkMode}">
         <div class="flex justify-center items-top lg:p-8">
             <div class="grid gap-4 lg:grid-cols-3 xl:w-5/6 w-screen relative">
                 
