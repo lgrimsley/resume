@@ -24,14 +24,20 @@ export const useAppStore = defineStore('app', {
         getAvailablePages: (state): Page[] => state.availablePages,
         getAppColor: (state): AppColor => state.color,
         getShowJson: (state): boolean => state.showJson,
-        getGradientClass: (state): string => {
-            return `bg-gradient-to-tr from-${state.color}-600 to-${state.color}-900`;
+        getGradientClass: (state) => (color: AppColor | null = null): string => {
+            return `bg-gradient-to-tr from-${color ?? state.color}-400/90 to-${color ?? state.color}-800/90 dark:from-${color ?? state.color}-600/90 dark:to-${color ?? state.color}-900/90`;
         },
         getGradientHoverClass: (state): string => {
-            return `hover:from-${state.color}-700 hover:to-${state.color}-900`;
+            return `hover:from-${state.color}-700/90 hover:to-${state.color}-900/90`;
         },
         getBorderClass: (state): string => {
-            return `border-${state.color}-700`;
+            return `dark:border-${state.color}-500 border-${state.color}-800`;
+        },
+        getBorderHoverClass: (state): string => {
+            return `dark:hover:border-${state.color}-500 hover:border-${state.color}-800`;
+        },
+        getTextColorClass: (state): string => {
+            return `text-${state.color}-800 dark:text-${state.color}-500`;
         },
         getIsGtagActive: (state): boolean => state.gtagActive
     },

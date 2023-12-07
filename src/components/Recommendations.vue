@@ -10,7 +10,7 @@ const props = defineProps({
     }
 });
 
-const appColor = computed(() => useAppStore().getAppColor);
+const textColorClass = computed(() => useAppStore().getTextColorClass);
 const expandedStates = ref(props.data?.map(() => false));
 
 const toggleSummary = (index: number) => {
@@ -26,7 +26,7 @@ const truncateSummary = (summary: string) => {
 
 <template>
     <div class="overflow-hidden relative dark:text-white flex flex-wrap flex-col md:flex-row gap-4 ">
-        <div class="bg-white/60 dark:bg-zinc-800/20 p-6 md:p-7 rounded w-full" v-for="recommendation, index in data">
+        <div class="bg-white/80 dark:bg-zinc-800/20 p-6 md:p-7 rounded-sm w-full" v-for="recommendation, index in data">
             <div class="flex md:justify-between items-baseline w-full md:px-12 md:flex-row flex-col">
                 <h3 class="font-semibold text-xl mb-4 ">
                     {{ recommendation.name }} <br/>
@@ -34,7 +34,7 @@ const truncateSummary = (summary: string) => {
                 </h3>
                 <ul class="flex-col flex gap-2 text-sm text-right">
                     <li class="flex gap-2 items-center md:flex-row-reverse">
-                        <Icon icon="cib:linkedin" :class="`text-${appColor}-500`" width="16px" />
+                        <Icon icon="cib:linkedin" :class="textColorClass" width="16px" />
                         <a :href="recommendation.linkedin" target="_blank" class="flex items-center gap-1 text-gray-700 dark:text-gray-200">
                             LinkedIn
                         </a>
@@ -43,12 +43,12 @@ const truncateSummary = (summary: string) => {
             </div>
             <div class="flex flex-col justify-center items-center">
                 <div class="flex pt-4 mt-4 md:mt-0 pb-6 gap-1 relative">
-                    <Icon icon="fontisto:quote-left" :class="`absolute text-${appColor}-500 -ml-4 md:ml-0 hidden md:block`" width="24px" /> 
+                    <Icon icon="fontisto:quote-left" :class="`absolute ${textColorClass} -ml-4 md:ml-0 hidden md:block`" width="24px" /> 
                     <p v-html="(expandedStates && expandedStates[index]) ? recommendation.summary : truncateSummary(recommendation.summary)" class="flex-col flex gap-4 md:px-12 text-ellipsis overflow-hidden z-2 relative font-light"></p>
                 </div>
                 <button @click="toggleSummary(index)" class="text-xs flex flex-col justify-center items-center gap-1" :class="{'flex-col-reverse': expandedStates && expandedStates[index] }">
                     {{ expandedStates && expandedStates[index] ? 'Show Less' : 'Read More' }}
-                    <Icon icon="fe:arrow-up" width="24px" :class="[{'rotate-180': expandedStates && !expandedStates[index] }, `transition ease-in-out duration-100 text-${appColor}-500`]" />
+                    <Icon icon="fe:arrow-up" width="24px" :class="[{'rotate-180': expandedStates && !expandedStates[index] }, `transition ease-in-out duration-100 ${textColorClass}`]" />
                 </button>
             </div>
         </div>

@@ -18,27 +18,30 @@ const formatDate = (dateString: string) => {
     return date.toLocaleString('default', { month: 'short', year: 'numeric' }); // e.g., 'May 2022'
 };
 
-const appColor = computed(() => useAppStore().getAppColor);
+const textColorClass = computed(() => useAppStore().getTextColorClass);
 </script>
 
 <template>
     <div class="overflow-hidden relative dark:text-white flex flex-col gap-8">
-        <div class="bg-white/60 dark:bg-zinc-800/20 p-6 md:p-8 rounded-sm" v-for="job in data">
+        <div class="bg-white/80 dark:bg-zinc-800/20 p-6 md:p-8 rounded-sm" v-for="job in data">
             <div class="flex flex-col md:flex-row md:gap-1 gap-4">
                 <div class="md:w-96 flex flex-col gap-3 pr-2">
                     <img v-if="job?.logo_url" :src="job.logo_url" class="" />
-                    <h2 class="text-3xl font-semibold uppercase tracking-wider">
-                        {{ job?.company }}
-                    </h2>
                     <a :href="job.url" target="_blank" class="text-xs flex items-center gap-1 text-gray-700 dark:text-gray-200">
-                        {{ job.url }} <Icon icon="majesticons:open-line" width="14px" />
+                        <h2 class="text-3xl font-semibold uppercase tracking-wider flex">
+                            {{ job?.company }} 
+                        </h2>
                     </a>
-                    <div class="mt-4">
-                        <h5 class="font-semibold mb-3 uppercase tracking-wider">{{ job.positions.length ? (job.positions.length > 1 ? 'Roles' : 'Role') : '' }}</h5>
-                        <h5 v-for="position in job.positions" class="text-lg mb-2 flex flex-col font-light tracking-wide">
+                    <h4 class="text-lg tracking-wider font-light flex gap-2">
+                        {{ job?.tenure }} · {{ job?.location  }}
+                    </h4>
+                    <div class="mt-4 ">
+                        <h5 class="font-semibold mb-4 uppercase tracking-wider">{{ job.positions.length ? (job.positions.length > 1 ? 'Roles' : 'Role') : '' }}</h5>
+                        <h5 v-for="position in job.positions" class="text-lg mb-3 flex flex-col font-normal tracking-wide ml-3 relative">
+                            <Icon icon="majesticons:chevron-right" width="20px" :class="`absolute -left-6 top-[3px] ${textColorClass}`" />
                             {{ position.position }} 
-                            <small class="-ml-1 text-zinc-600 dark:text-gray-300 font-normal flex items-center gap-1">
-                                <Icon icon="ic:baseline-turn-left" width="22px" class="rotate-180 -mt-1" />
+                            <small class="-ml-1 mt-1 text-zinc-600 dark:text-gray-400 font-normal flex items-center gap-1 text-sm ">
+                                <Icon icon="ic:baseline-turn-left" width="22px" class="rotate-180 -mt-1"  />
                                 {{ formatDate(position.startDate) }} - {{ formatDate(position.endDate) }} 
                             </small>
                         </h5>
@@ -52,7 +55,7 @@ const appColor = computed(() => useAppStore().getAppColor);
                         <h5 class="font-semibold mb-3 uppercase tracking-wider">Responsibilities</h5>
                         <ul  class="pl-4">
                             <li v-for="bullet in job.bullets" class=" mb-3 list-none relative">
-                                <Icon icon="majesticons:chevron-right" width="18px" :class="`absolute -left-5 top-0.5 text-${appColor}-500 `" />
+                                <Icon icon="majesticons:chevron-right" width="20px" :class="`absolute -left-5 top-[3px] ${textColorClass}`" />
                                 <p class="ml-1 font-light tracking-wide">
                                     {{ bullet }}
                                 </p>

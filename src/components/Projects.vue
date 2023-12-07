@@ -12,12 +12,12 @@ const props = defineProps({
 });
 
 const appColor = computed(() => useAppStore().getAppColor);
-const getBorderClass = computed(() => useAppStore().getBorderClass);
+const textColorClass = computed(() => useAppStore().getTextColorClass);
 </script>
 
 <template>
    <div class="overflow-hidden relative dark:text-white">
-        <div class="bg-white/60 dark:bg-zinc-800/20 p-6 lg:p-7 rounded-sm" v-for="project in data">
+        <div class="bg-white/80 dark:bg-zinc-800/20 p-6 lg:p-7 rounded-sm" v-for="project in data">
             <div class="flex md:flex-row flex-col gap-4">
                 <div class="md:w-96 flex flex-col gap-3">
                     <h2 class="text-2xl font-semibold uppercase tracking-wider">
@@ -38,7 +38,7 @@ const getBorderClass = computed(() => useAppStore().getBorderClass);
 
                     <ul v-if="project?.bullets.length" class="pl-4">
                         <li v-for="bullet in project.bullets" class=" mb-3 list-none relative">
-                            <Icon icon="majesticons:chevron-right" width="18px" :class="`absolute -left-5 top-0.5 text-${appColor}-500 dark:text-${appColor}-500`" />
+                            <Icon icon="majesticons:chevron-right" width="18px" :class="`absolute -left-5 top-0.5 ${textColorClass}`" />
                             <p class="ml-1 font-light tracking-wide">
                                 {{ bullet }}
                             </p>

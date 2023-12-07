@@ -51,7 +51,7 @@ const downloadResume = () => {
                 
                 <!-- right col -->
                 <div class="lg:col-span-2 lg:pr-4 lg:pl-7 w-screen lg:w-full">
-                    <div class="bg-white/80 dark:bg-zinc-800/20">
+                    <div class="bg-white/80 dark:bg-zinc-800/20 shadow-sm">
                         <Toolbar />
                         <About v-if="basics" :basics="basics" />
                     </div>

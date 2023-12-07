@@ -49,8 +49,10 @@ export type WorkExperience = {
     company: string;
     summary: string;
     logo_url: string;
+    location: string;
     url: string;
     logo: string;
+    tenure: string;
     bullets: string[];
     positions: Position[];
 };

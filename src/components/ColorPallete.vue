@@ -13,6 +13,9 @@ const borderClass = computed(() => appStore.getBorderClass);
 const isDragging = ref(false);
 const selectedColorIndex = ref(colors.indexOf(appStore.getAppColor));
 const colorElementsRef = ref<Element[]>([]);
+const gradientClass = (color: AppColor): string => {
+    return appStore.getGradientClass(color);
+};
 
 const startDrag = (color: AppColor) => {
     setAppColor(color);
@@ -90,7 +93,7 @@ const getColorByTouchEvent = (event: TouchEvent) => {
                 @touchstart.prevent="startDrag(color as AppColor)"
                 @touchmove="onColorHover(color as AppColor, $event, true)"
                 ref="colorElementsRef"
-                :class="`bg-gradient-to-tr from-${color}-600 to-${color}-900 w-full h-full cursor-pointer flex items-center justify-center`"
+                :class="[`w-full h-full cursor-pointer flex items-center justify-center`, gradientClass(color as AppColor)]"
                  @dragstart.prevent="preventDefaultDrag"
                  @touchcancel="endDrag"
             >

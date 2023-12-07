@@ -37,3 +37,39 @@
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
 }
+
+
+@keyframes turn-swing {
+  0% {
+    transform: rotate(-90deg);
+  }
+  10% {
+    transform: rotate(-40deg);
+  }
+  15% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(-22deg);
+  }
+  40% {
+    transform: rotate(16deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(7deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.turn-swing {
+  animation: turn-swing 0.5s ease-in;
+  animation-delay: 300ms;
+  animation-duration: 2000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
