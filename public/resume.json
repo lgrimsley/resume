@@ -99,10 +99,36 @@
   ],
   "projects": [
     {
+      "name": "Resume Web App",
+      "summary": "JSON Powered Resume (you are here)",
+      "url": "https://lgrimsley.com",
+      "image_url": "/resume-website.png",
+      "repo": {
+        "icon": "bi:github",
+        "url": "https://github.com/lgrimsley/resume",
+        "private": false,
+        "access": "Open Source"
+      },
+      "bullets": [
+        "Designed and built a lightweight Vue application to display my resume.",
+        "Create an extensive JSON data structure to standardize resume data.",
+        "Implemented basic hydration methods into Pinia stores for data persistence.",
+        "Created bespoke animations, customization tools, JSON viewer, and dark mode.",
+        "Technical Stack: TailwindCSS, Vue 3, Pinia, Vercel, JSON"
+      ],
+      "keywords": ["Vue 3", "TailwindCSS", "Pinia", "Vercel", "Animation", "JSON"]
+    },
+    {
       "name": "Project Magic",
       "summary": "AI Powered Jira Planning - SaaS Prototype",
       "url": "https://projectmagic.ai",
       "image_url": "/project-magic.png",
+      "repo": {
+        "icon": "bi:github",
+        "url": "https://github.com/lgrimsley/ticket-enricher",
+        "private": true,
+        "access": "Request Access"
+      },
       "bullets": [
         "Developed a complex tool to automate Jira ticket generation using LLMs.",
         "Designed comprehensive Jira integration with flexible custom field support.",
@@ -110,7 +136,7 @@
         "Generate a highly customizable set of tickets for a described project in seconds.",
         "Technical Stack: TailwindCSS, Nuxt 3, Vue 3, Pinia, Laravel 10, MySQL, AWS."
       ],
-      "keywords": ["Jira", "Automation", "LLM", "Nuxt 3", "Vue 3", "TailwindCSS", "Laravel 10", "MySQL", "AWS"]
+      "keywords": ["Jira", "Automation", "LLM", "Nuxt 3", "Vue 3", "TailwindCSS", "Laravel 10", "MySQL", "AWS", "REST", "JSON API"]
     }
   ],
   "education": [],

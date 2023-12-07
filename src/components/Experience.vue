@@ -24,18 +24,18 @@ const textColorClass = computed(() => useAppStore().getTextColorClass);
 <template>
     <div class="overflow-hidden relative dark:text-white flex flex-col gap-8">
         <div class="bg-white/80 dark:bg-zinc-800/20 p-6 md:p-8 rounded-sm" v-for="job in data">
-            <div class="flex gap-8 items-center mb-8 justify-between">
+            <div class="flex gap-2 items-center mb-8 justify-between flex-col md:flex-row">
                 <img v-if="job?.logo_url" :src="job.logo_url" class="" />
                 <a :href="job.url" target="_blank" >
                     <h2 class="text-3xl font-semibold uppercase tracking-wider flex">
                         {{ job?.company }} 
                     </h2>
                 </a>
-                <h4 class="text-sm lg:text-lg whitespace-nowrap tracking-wider font-light flex flex-col lg:flex-row justify-center items-center gap-2 text-zinc-600 dark:text-zinc-400">
+                <h4 class="text-sm lg:text-lg whitespace-nowrap tracking-wider font-light flex justify-center items-center gap-2 text-zinc-600 dark:text-zinc-400">
                     <span>
                         {{ job?.tenure }}
                     </span> 
-                    <span class="hidden lg:flex">·</span>
+                    <span >·</span>
                     <span>
                         {{ job?.location  }}
                     </span>

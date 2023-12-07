@@ -61,10 +61,17 @@ export type Project = {
     name: string;
     summary: string;
     url: string;
+    repo: GithubRepo;
     image_url: string;
     bullets: string[];
     keywords: string[];
 };
+export type GithubRepo = {
+    url: string;
+    private: boolean;
+    access: string;
+    icon: string;
+}
 
 export type Education = {
     institution: string;

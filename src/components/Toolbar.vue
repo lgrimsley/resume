@@ -1,15 +1,11 @@
 
 <script setup lang="ts">
-import colors from '@/colors';
 import { useAppStore } from '@/stores/app.store';
-import type { AppColor } from '@/types/app';
 import { Icon } from '@iconify/vue/dist/iconify.js';
-import { computed, onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import DarkModeToggle from './DarkModeToggle.vue';
 import ColorPallete from './ColorPallete.vue';
 
-const appColor = computed(() => useAppStore().getAppColor);
-const borderClass = computed(() => useAppStore().getBorderClass);
 const palletVisible = ref(false);
 const toggleJson = () => {
     useAppStore().setShowJson(useAppStore().getShowJson ? false : true);
@@ -51,7 +47,7 @@ const togglePallet = () => {
             <Icon icon="pepicons-pencil:paint-pallet" class="dark:text-white text-white lg:text-black lg:scale-100 scale-75" width="32px" :class="{'shake': isWiggling}"  />
         </button>
         <button @click="toggleJson" class="z-10 mt-1">
-            <Icon icon="lucide:file-json" class="dark:text-white text-white lg:text-black lg:scale-100 scale-75" width="32px" />
+            <Icon icon="lucide:file-json" class="dark:text-white text-white lg:text-black lg:scale-100 scale-75"  width="32px" />
         </button>
         <div class="relaive w-24 h-8 -ml-8">
             <DarkModeToggle class="lg:scale-[30%] scale-[20%] -mt-8" />
