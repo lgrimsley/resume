@@ -1,6 +1,6 @@
-# Resume
+# Vue 3 JSON Resume: [Live Demo](https://lgrimsley.com)
 
-## [Live Resume](https://lgrimsley.com)
+### You are welcome to use this for yourself!
 
 ## Project Setup
 
@@ -41,9 +41,11 @@ Replace `"G-XXXXXXXXXX"` with your Google Analytics Measurement ID (Optional)
 
 ### JSON Resume Structure
 
-The application expects the resume data in a specific JSON format. Below is the structure of the JSON file:
+Create a .json file with your resume data using this format. 
 
-```json
+*Tip: Copy/paste your resume along with the following format, it does a good job of filling in most details.*
+
+```JSON
 {
   "basics": {
     "name": "Full Name",
@@ -158,6 +160,3 @@ The application expects the resume data in a specific JSON format. Below is the 
 ```
 
 Ensure your resume data conforms to this structure for proper rendering in the application.
-
-
-That's it! Enjoy, and please give credit if you use my resume app.
