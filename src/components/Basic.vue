@@ -48,7 +48,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="bg-gray-200/30 dark:bg-zinc-800/20 md:rounded-tr md:rounded-tl dark:text-white overflow-hidden relative">
+    <div class="bg-white/60 dark:bg-zinc-800/20 md:rounded-tr md:rounded-tl dark:text-white overflow-hidden relative">
         <!-- <div class="h-32" style="background-image: url('/abstract_bg.png'); background-position: 0% 90%;"></div> -->
         <div :class="gradientClass" class="h-32 w-full flex-col items-end flex justify-between transition duration-500 ease-in-out">
             <span class="border border-white text-white font-semibold dark:border-gray-200 dark:text-gray-200 px-2 py-1 text-xs rounded mr-3 mt-3">{{ basics?.status }}</span>
@@ -75,7 +75,7 @@ onUnmounted(() => {
             <button ref="downloadButton"  @mouseover="buttonHover = true" @mouseleave="buttonHover = false" :class="[gradientClass, gradientHoverClass]" class="w-full justify-center flex group text-white items-center mt-2 py-4 md:rounded-br md:rounded-bl font-semibold relative" @click="$emit('download-resume')">
                 <span  :style="buttonHover ? moveRightStyle : ''" ref="downloadText" class="flex gap-2 items-center transition ease-in-out delay-150 tracking-wider">
                     Download Resume
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transition duration-200 delay-300 ease-in" fill="none" viewBox="0 0 24 24" stroke="currentColor" :class="{'-rotate-90': !buttonHover}">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                     </svg>
                 </span>

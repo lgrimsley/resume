@@ -37,7 +37,7 @@ const downloadResume = () => {
 </script>
 
 <template>
-    <main class=" min-h-screen max-w-screen overflow-x-hidden" :class="{'dark bg-zinc-900 text-white': useAppStore().getDarkMode, 'bg-white': !useAppStore().getDarkMode}">
+    <main class=" min-h-screen max-w-screen overflow-x-hidden" :class="{'dark bg-zinc-900 text-white': useAppStore().getDarkMode, 'bg-gray-100': !useAppStore().getDarkMode}">
         <div class="flex justify-center items-top lg:p-8">
             <div class="grid gap-4 lg:grid-cols-3 xl:w-5/6 w-screen relative">
                 
@@ -51,7 +51,7 @@ const downloadResume = () => {
                 
                 <!-- right col -->
                 <div class="lg:col-span-2 lg:pr-4 lg:pl-7 w-screen lg:w-full">
-                    <div class="bg-gray-200/30 dark:bg-zinc-800/20">
+                    <div class="bg-white/80 dark:bg-zinc-800/20">
                         <Toolbar />
                         <About v-if="basics" :basics="basics" />
                     </div>
