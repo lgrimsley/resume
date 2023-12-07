@@ -136,7 +136,7 @@
         "Generate a highly customizable set of tickets for a described project in seconds.",
         "Technical Stack: TailwindCSS, Nuxt 3, Vue 3, Pinia, Laravel 10, MySQL, AWS."
       ],
-      "keywords": ["Jira", "Automation", "LLM", "Nuxt 3", "Vue 3", "TailwindCSS", "Laravel 10", "MySQL", "AWS", "REST", "JSON API"]
+      "keywords": ["Jira", "Automation", "LLM", "Nuxt 3", "Vue 3", "TailwindCSS", "Laravel 10", "MySQL", "AWS", "REST", "JSON API", "PHP", "TypeScript", "Async"]
     }
   ],
   "education": [],
