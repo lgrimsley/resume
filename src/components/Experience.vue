@@ -24,30 +24,25 @@ const textColorClass = computed(() => useAppStore().getTextColorClass);
 <template>
     <div class="overflow-hidden relative dark:text-white flex flex-col gap-8">
         <div class="bg-white/80 dark:bg-zinc-800/20 p-6 md:p-8 rounded-sm" v-for="job in data">
-            <div class="flex flex-col md:flex-row md:gap-1 gap-4">
-                <div class="md:w-96 flex flex-col gap-3 pr-2">
-                    <img v-if="job?.logo_url" :src="job.logo_url" class="" />
-                    <a :href="job.url" target="_blank" class="text-xs flex items-center gap-1 text-gray-700 dark:text-gray-200">
-                        <h2 class="text-3xl font-semibold uppercase tracking-wider flex">
-                            {{ job?.company }} 
-                        </h2>
-                    </a>
-                    <h4 class="text-lg tracking-wider font-light flex gap-2">
-                        {{ job?.tenure }} · {{ job?.location  }}
-                    </h4>
-                    <div class="mt-4 ">
-                        <h5 class="font-semibold mb-4 uppercase tracking-wider">{{ job.positions.length ? (job.positions.length > 1 ? 'Roles' : 'Role') : '' }}</h5>
-                        <h5 v-for="position in job.positions" class="text-lg mb-3 flex flex-col font-normal tracking-wide ml-3 relative">
-                            <Icon icon="majesticons:chevron-right" width="20px" :class="`absolute -left-6 top-[3px] ${textColorClass}`" />
-                            {{ position.position }} 
-                            <small class="-ml-1 mt-1 text-zinc-600 dark:text-gray-400 font-normal flex items-center gap-1 text-sm ">
-                                <Icon icon="ic:baseline-turn-left" width="22px" class="rotate-180 -mt-1"  />
-                                {{ formatDate(position.startDate) }} - {{ formatDate(position.endDate) }} 
-                            </small>
-                        </h5>
-                    </div>
-                </div>
-                <div class="w-full">
+            <div class="flex gap-8 items-center mb-8 justify-between">
+                <img v-if="job?.logo_url" :src="job.logo_url" class="" />
+                <a :href="job.url" target="_blank" >
+                    <h2 class="text-3xl font-semibold uppercase tracking-wider flex">
+                        {{ job?.company }} 
+                    </h2>
+                </a>
+                <h4 class="text-sm lg:text-lg whitespace-nowrap tracking-wider font-light flex flex-col lg:flex-row justify-center items-center gap-2 text-zinc-600 dark:text-zinc-400">
+                    <span>
+                        {{ job?.tenure }}
+                    </span> 
+                    <span class="hidden lg:flex">·</span>
+                    <span>
+                        {{ job?.location  }}
+                    </span>
+                </h4>
+            </div>
+            <div class="flex flex-col md:flex-row md:gap-8 gap-4 ">
+                <div class="flex-1">
                     <p class="mb-2 text-lg font-light" v-if="job?.summary">
                         {{ job.summary }}
                     </p>
@@ -62,6 +57,17 @@ const textColorClass = computed(() => useAppStore().getTextColorClass);
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div class="flex flex-col flex-2">
+                    <h4 class="font-semibold mb-3 uppercase tracking-wider">{{ job.positions.length ? (job.positions.length > 1 ? 'Roles' : 'Role') : '' }}</h4>
+                    <h5 v-for="position in job.positions" class="text-md mb-3 flex flex-col font-normal tracking-wide ml-5 relative">
+                        <Icon icon="majesticons:chevron-right" width="20px" :class="`absolute -left-6 top-[3px] ${textColorClass}`" />
+                        {{ position.position }} 
+                        <small class="-ml-1 mt-1 text-zinc-600 dark:text-gray-400 font-normal flex items-center gap-1 text-sm ">
+                            <Icon icon="ic:baseline-turn-left" width="22px" class="rotate-180 -mt-1"  />
+                            {{ formatDate(position.startDate) }} - {{ formatDate(position.endDate) }} 
+                        </small>
+                    </h5>
                 </div>
             </div>
         </div>
