@@ -17,7 +17,7 @@ const getBorderClass = computed(() => useAppStore().getBorderClass);
 
 <template>
    <div class="overflow-hidden relative dark:text-white">
-        <div class="bg-gray-100/30 dark:bg-zinc-800/10 p-6 lg:p-7 rounded" v-for="project in data">
+        <div class="bg-gray-200/30 dark:bg-zinc-800/20 p-6 lg:p-7 rounded-sm" v-for="project in data">
             <div class="flex md:flex-row flex-col gap-4">
                 <div class="md:w-96 flex flex-col gap-3">
                     <h2 class="text-2xl font-semibold uppercase tracking-wider">

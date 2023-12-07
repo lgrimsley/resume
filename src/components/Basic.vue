@@ -48,7 +48,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="bg-gray-100/30 dark:bg-zinc-800/10 md:rounded-tr md:rounded-tl dark:text-white overflow-hidden relative">
+    <div class="bg-gray-200/30 dark:bg-zinc-800/20 md:rounded-tr md:rounded-tl dark:text-white overflow-hidden relative">
         <!-- <div class="h-32" style="background-image: url('/abstract_bg.png'); background-position: 0% 90%;"></div> -->
         <div :class="gradientClass" class="h-32 w-full flex-col items-end flex justify-between transition duration-500 ease-in-out">
             <span class="border border-white text-white font-semibold dark:border-gray-200 dark:text-gray-200 px-2 py-1 text-xs rounded mr-3 mt-3">{{ basics?.status }}</span>

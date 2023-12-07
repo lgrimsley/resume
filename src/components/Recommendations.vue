@@ -26,7 +26,7 @@ const truncateSummary = (summary: string) => {
 
 <template>
     <div class="overflow-hidden relative dark:text-white flex flex-wrap flex-col md:flex-row gap-4 ">
-        <div class="bg-gray-100/30 dark:bg-zinc-800/10 p-6 md:p-7 rounded w-full" v-for="recommendation, index in data">
+        <div class="bg-gray-200/30 dark:bg-zinc-800/20 p-6 md:p-7 rounded w-full" v-for="recommendation, index in data">
             <div class="flex md:justify-between items-baseline w-full md:px-12 md:flex-row flex-col">
                 <h3 class="font-semibold text-xl mb-4 ">
                     {{ recommendation.name }} <br/>
