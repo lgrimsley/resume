@@ -228,8 +228,8 @@
     }
   ],
   "skills": {
-    "languages": ["TypeScript", "CSS", "PHP", "Node.js", "SQL"],
-    "technologies": ["Laravel", "Vue/Nuxt", "Tailwind", "Bootstrap", "jQuery", "Blade", "REST", "OpenAPI", "SASS"],
+    "languages": ["TypeScript", "JavaScript", "CSS", "PHP", "Node.js", "SQL", "HTML"],
+    "technologies": ["Laravel", "Vue", "Nuxt", "Tailwind", "Bootstrap", "jQuery", "Blade", "REST", "OpenAPI", "SASS"],
     "services": ["SSH", "UNIX", "AWS", "DigitalOcean", "NGINX", "Apache", "Git", "GitHub", "Jira", "Bitbucket", "Opsgenie"],
     "tools": ["Visual Studio Code", "GPT-4", "Copilot", "Postman", "Docker", "Firefox Developer Edition", "HeidiSQL"]
   },
