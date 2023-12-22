@@ -43,7 +43,7 @@ Replace `"G-XXXXXXXXXX"` with your Google Analytics Measurement ID (Optional)
 
 Create a .json file with your resume data using this format. 
 
-*Tip: Copy/paste your resume along with the following format, it does a good job of filling in most details.*
+*Tip: Copy/paste your resume along with the following format into ChatGPT, it does a good job of filling in most details.*
 
 ```JSON
 {
