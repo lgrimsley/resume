@@ -5,22 +5,38 @@ import Skills from '@/components/Skills.vue';
 import About from '@/components/About.vue';
 import ResumeJson from '@/components/ResumeJson.vue';
 import Footer from '@/components/Footer.vue';
-
+import { useRoute } from 'vue-router';
 import { useResumeStore } from '@/stores/resume.store';
 import { useAppStore } from '@/stores/app.store';
-import { onMounted, computed } from 'vue';
+import { onMounted, computed, watch } from 'vue';
 import { event } from 'vue-gtag';
 import Nav from '@/components/Nav.vue';
 import Toolbar from '@/components/Toolbar.vue';
 
-const basics = computed(() => useResumeStore().getBasics);
-const information = computed(() => useResumeStore().getInformation);
-const skills = computed(() => useResumeStore().getSkills);
-const softSkills = computed(() => useResumeStore().getSoftSkills);
-const showJson = computed(() => useAppStore().getShowJson);
+const appStore = useAppStore();
+const resumeStore = useResumeStore();
+const route = useRoute();
+
+const basics = computed(() => resumeStore.getBasics);
+const information = computed(() => resumeStore.getInformation);
+const skills = computed(() => resumeStore.getSkills);
+const softSkills = computed(() => resumeStore.getSoftSkills);
+const showJson = computed(() => appStore.getShowJson);
 
 onMounted(async () => {
-    await useResumeStore().hydrate();
+    await resumeStore.hydrate();
+    // Set the initial active page based on the URL when the component mounts
+    const initialTab = route.params.tab;
+    if (initialTab) {
+        appStore.setActivePageFromKey(initialTab.toString());
+    }
+});
+
+// Watch for changes in the route parameter and update the active page in the store
+watch(() => route.params.tab, (newTab, oldTab) => {
+    if (newTab !== oldTab) {
+        appStore.setActivePageFromKey(newTab.toString());
+    }
 });
 
 const downloadResume = () => {
@@ -34,6 +50,8 @@ const downloadResume = () => {
         event('download', {'event_category': 'engagement', 'event_label': 'download_resume'});
     }
 }
+
+
 </script>
 
 <template>

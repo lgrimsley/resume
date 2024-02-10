@@ -101,6 +101,12 @@ export const useAppStore = defineStore('app', {
             }
             this.setAvailablePages(pages);
         },
+        setActivePageFromKey(key: string) {
+            const page = this.availablePages.find(p => p.key === key);
+            if (page) {
+                this.setActivePage(page);
+            }
+        },
         setColor(color: AppColor) {
             this.color = color;
         },
