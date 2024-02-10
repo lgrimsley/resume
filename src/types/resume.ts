@@ -116,3 +116,15 @@ export type ResumeState = {
   resume: Resume | null;
   initialized: boolean;
 }
+
+export type RatedSkill = {
+  name: string;
+  rating: number;
+};
+
+export type RatedSkills = {
+  technicalSkills: RatedSkill[];
+  technologies: RatedSkill[];
+  services: RatedSkill[];
+  tools: RatedSkill[];
+};

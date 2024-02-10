@@ -234,11 +234,17 @@
       "summary": "<p>It was my pleasure to work alongside Logan Grimsley for a year, and without hesitation, I recommend him for any senior full stack engineering position. Logan is not just a colleague; he's a true asset to any tech team.</p><p>Logan's generosity with his time is truly commendable. In an industry where time is often the scarcest resource, he goes above and beyond to help out, whether it's with troubleshooting code or explaining complex concepts to the team. His willingness to share knowledge and support his colleagues makes him a standout professional.</p><p>When it comes to technical skills, Logan's knowledge spans the entire spectrum of front-end and back-end technologies. His versatility allows him to seamlessly navigate through the intricacies of a project, contributing to its success from both the user interface to the server logic.</p><p>One of Logan's standout qualities is his fearlessness when it comes to challenging ideas. If he believes there's a better solution, he doesn't hesitate to voice his perspective, contributing to a culture of continuous improvement and innovation within the team.</p><p>Logan possesses a superpower for translating complicated business logic into easily understandable chunks. This skill not only makes him an effective communicator but also enhances the collaborative problem-solving dynamic within the team.</p><p>His patience and kindness are evident in every interaction. In an environment that can sometimes be high-pressure, Logan remains calm and collected, fostering a positive atmosphere for everyone.</p><p>His exceptional listening skills extend beyond the codebase – Logan is an avid consumer of audiobooks, showcasing his commitment to continuous learning and personal growth. And yes, he's not just a senior full stack engineer; he's a Star Wars fan, bringing a touch of the galaxy far, far away to the tech world.</p><p>In conclusion, Logan Grimsley is the kind of senior full stack engineer every team dreams of having. His technical expertise, collaborative spirit, and genuine personality make him an outstanding professional. I wholeheartedly recommend Logan for any position that requires a skilled and dedicated senior engineer.</p>"
     }
   ],
-  "skills": {
+  "ratedSkills": {
     "languages": ["TypeScript", "JavaScript", "CSS", "PHP", "Node.js", "SQL", "HTML"],
     "technologies": ["Laravel", "Vue", "Nuxt", "Tailwind", "Bootstrap", "jQuery", "Blade", "REST", "OpenAPI", "SASS"],
     "services": ["SSH", "UNIX", "AWS", "DigitalOcean", "NGINX", "Apache", "Git", "GitHub", "Jira", "Bitbucket", "Opsgenie"],
     "tools": ["Visual Studio Code", "GPT-4", "Copilot", "Postman", "Docker", "Firefox Developer Edition", "HeidiSQL"]
   },
-  "softSkills": ["Ownership Mentality", "Collaborative", "User Focused", "Language & Articulation", "Leadership & Empathy"]
+  "skills": {
+    "languages": ["TypeScript", "JavaScript", "CSS", "PHP", "Node.js", "SQL", "HTML"],
+    "technologies": ["Laravel", "Vue", "Nuxt", "Tailwind", "Bootstrap", "jQuery", "Blade", "REST", "OpenAPI", "SASS"],
+    "services": ["SSH", "UNIX", "AWS", "DigitalOcean", "NGINX", "Apache", "Git", "GitHub", "Jira", "Bitbucket", "Opsgenie"],
+    "tools": ["Visual Studio Code", "GPT-4", "Copilot", "Postman", "Docker", "Firefox Developer Edition", "HeidiSQL"],
+    "softSkills": ["Ownership Mentality", "Collaborative", "User Focused", "Language & Articulation", "Leadership & Empathy"]
+  }
 }

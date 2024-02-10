@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Basic from '@/components/Basic.vue'
 import Information from '@/components/Information.vue'
-import Skills from '@/components/Skills.vue';
 import About from '@/components/About.vue';
 import ResumeJson from '@/components/ResumeJson.vue';
 import Footer from '@/components/Footer.vue';
@@ -12,6 +11,7 @@ import { onMounted, computed } from 'vue';
 import { event } from 'vue-gtag';
 import Nav from '@/components/Nav.vue';
 import Toolbar from '@/components/Toolbar.vue';
+import SkillsSection from '@/components/SkillsSection.vue';
 
 const basics = computed(() => useResumeStore().getBasics);
 const information = computed(() => useResumeStore().getInformation);
@@ -45,7 +45,7 @@ const downloadResume = () => {
                 <div class="flex flex-col gap-4 justify-start w-screen md:w-full">
                     <Basic v-if="basics" :basics="basics" @download-resume="downloadResume" />
                     <Information v-if="information" :information="information" />
-                    <Skills v-if="skills && softSkills" :skills="skills" :soft-skills="softSkills"  />
+                    <SkillsSection v-if="skills && softSkills" :skills="skills" :soft-skills="softSkills"  />
                 </div>
                 <!-- end left col -->
                 

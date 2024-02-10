@@ -2,7 +2,7 @@
 import { useAppStore } from '@/stores/app.store';
 import { type Skills, type SoftSkills } from '@/types/resume';
 import { computed, type PropType } from 'vue';
-import SkillSmall from './SkillSmall.vue';
+import SkillsSimple from './Skills/Simple.vue';
 
 const props = defineProps({
     skills: {
@@ -23,13 +23,13 @@ const getBorderClass = computed(() => useAppStore().getBorderClass);
             <div v-for="list, category in skills" class="flex flex-col space-between ">
                 <h3 class="text-sm font-bold mb-4 uppercase">{{ category }}</h3>
                 <div class="flex flex-wrap">
-                    <SkillSmall v-for="skill in list" :skill="skill" />
+                    <SkillsSimple v-for="skill in list" :skill="skill" />
                 </div>
             </div>
             <div v-if="softSkills?.length">
                 <h3 class="text-sm font-bold mb-4 uppercase">Soft Skills</h3>
                 <div class="flex flex-wrap">
-                    <SkillSmall v-for="skill in softSkills" :skill="skill" />
+                    <SkillsSimple v-for="skill in softSkills" :skill="skill" />
                 </div>
             </div>
         </div>

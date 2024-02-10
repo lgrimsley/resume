@@ -3,7 +3,7 @@ import { useAppStore } from '@/stores/app.store';
 import { type Project } from '@/types/resume';
 import { Icon } from '@iconify/vue/dist/iconify.js';
 import { computed, type PropType } from 'vue';
-import SkillSmall from './SkillSmall.vue';
+import SkillsSimple from './Skills/Simple.vue';
 
 const props = defineProps({
     data: {
@@ -64,7 +64,7 @@ const textColorClass = computed(() => useAppStore().getTextColorClass);
                 <div class="md:w-2/5 flex flex-2 flex-col">
                     <img v-if="project.image_url" :src="project.image_url" class="rounded-sm mb-8 border border-zinc-800 dark:border-zinc-600"/>
                     <div class="flex h-fit flex-wrap justify-center md:justify-start">
-                        <SkillSmall v-for="skill in project.keywords" :skill="skill" />
+                        <SkillsSimple v-for="skill in project.keywords" :skill="skill" />
                     </div>
                 </div>
             </div>
