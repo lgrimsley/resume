@@ -30,23 +30,25 @@
         "company": "Alvaria",
         "summary": "Originally Aspect, a contact center and workforce management company, have evolved into a communications company",
         "url": "https://www.alvaria.com",
-        "logo_url": "URL to company logo",
+        "logo_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.iI-H--BD774stiIztdY2UQAAAA%26pid%3DApi&f=1&ipt=95187331f225414588ed22a7498544305c66f911f530873cbcd354ae552fc473&ipo=images",
         "bullets": [
-          "Key responsibility or achievement"
+          "Architecture and Proof of Concept development",
+          "Architected and Developed net-new microservices for internal use",
+          "Develop Best Practices for newly architected services"
         ],
         "location": "Remote",
         "positions": [
           {
             "position": "Sr. Systems Engineer",
             "startDate": "2021-01",
-            "endDate": "2024-02",
-            "summary": "- Provide multidisciplinary technical guidance; enhancing system architecture and engineering processes. - Lead cross-functional teams in executing new feature development across R&D and Operations departments. - Design, engineer, and deploy innovative tools for software and OS maintenance, improving product lifecycle management.    - Offer ongoing support and expertise in the operation of new products and features, ensuring optimal performance. "
+            "endDate": "2024-03",
+            "summary": ["- Provide multidisciplinary technical guidance; enhancing system architecture and engineering processes."," - Lead cross-functional teams in executing new feature development across R&D and Operations departments. - Design, engineer, and deploy innovative tools for software and OS maintenance, improving product lifecycle management.    - Offer ongoing support and expertise in the operation of new products and features, ensuring optimal performance. "]
           },
           {
-            "position": "Sr. Customer Care Engineer",
+            "position": "Sr. Customer Care Engineer (Advanced)",
             "startDate": "2012-04",
             "endDate": "2020-12",
-            "summary": "    Develop and implement automation scripts, enhancing efficiency and reliability of testing procedures. Maintain test environments in AWS, leveraging cloud infrastructure for scalable solutions. Conduct troubleshooting across various domains, including networking, databases, and VOIP, to resolve complex issues. Collaborate with internal and external stakeholders to provide effective communication and problem resolution.             Document technical issues and solutions for knowledge sharing and future reference, contributing to a robust knowledge base."
+            "summary": "Develop and implement automation scripts, enhancing efficiency and reliability of testing procedures. Maintain test environments in AWS, leveraging cloud infrastructure for scalable solutions. Conduct troubleshooting across various domains, including networking, databases, and VOIP, to resolve complex issues. Collaborate with internal and external stakeholders to provide effective communication and problem resolution.             Document technical issues and solutions for knowledge sharing and future reference, contributing to a robust knowledge base."
           },
           {
             "position": "Independent Contractor",
@@ -71,8 +73,8 @@
         "keywords": ["Python", "FastAPI", "RESTful API","Celery","Kubernetes"]
       },
       {
-        "name": "Deplyo MFA",
-        "summary": "Deploy MFA into our production, customer-facing environment",
+        "name": "MFA Enablement",
+        "summary": "Architect MFA into our production, customer-facing environment",
         "url": "",
         "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flive.staticflickr.com%2F65535%2F51930104556_0c89c7d6c5_o_d.png&f=1&nofb=1&ipt=ff2f81078e13138a3506965722068c4ffae9bb53ff0068fdb096ce2a94a2852c&ipo=images",
         "bullets": [
@@ -90,9 +92,11 @@
         "institution": "Murray State University",
         "area": "Bachelor's of Science",
         "studyType": "Telecommunications Systems Management",
-        "startDate": "2008.08",
-        "endDate": "2012.12",
-        "gpa": "3.8"
+        "startDate": "2008-08",
+        "endDate": "2012-12",
+        "gpa": "3.8",
+        "url": "https://www.murraystate.edu/"
+
       }
     ],
     "references": [
