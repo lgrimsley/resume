@@ -1,6 +1,7 @@
 # Vue 3 JSON Resume: [Live Demo](https://lgrimsley.com)
 
-### You are welcome to use this for yourself!
+### Site Details
+This sites utilizes AWS Code Build, Code Pipeline, S3
 
 ## Project Setup
 
