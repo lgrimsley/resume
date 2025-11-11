@@ -1,0 +1,268 @@
+{
+    "basics": {
+      "name": "Logan Grimsley",
+      "label": "Full Stack Engineer",
+      "email": "lgrimsley@gmail.com",
+      "phone": "(502) 716-9026",
+      "url": "https://lgrimsley.com",
+      "resume_url": "/Logan Grimsley - Resume 11_2023.pdf",
+      "summary": "Seasoned full stack engineer with 10+ years architecting scalable web applications and distributed systems. Specialized in designing clean service architectures with proper separation of concerns, implementing pub/sub patterns, and building data-intensive applications that scale. Passionate about leveraging AI tools to enhance development workflows and engineering productivity. Strong background in PHP/Laravel and modern JavaScript (Vue/Nuxt), with expertise in system design, caching strategies, and service integration patterns. My drive is simple: architect elegant solutions that scale, mentor teams to excellence, and continuously push the boundaries of what's possible with modern tooling.",
+      "status": "Open To Work",
+      "information": {
+        "location": "Louisville, KY",
+        "yearsOfExperience": "10+",
+        "availability": "Full Time",
+        "relocation": "Open to Relocation",
+        "remote": "Open to Remote"
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "logan-grimsley",
+          "url": "https://linkedin.com/in/logan-grimsley",
+          "icon": "bi:linkedin"
+        },
+        {
+          "network": "GitHub",
+          "username": "lgrimsley",
+          "url": "https://github.com/lgrimsley",
+          "icon": "bi:github"
+        }
+      ],
+      "image": "/avatar.png"
+    },
+    "work": [
+      {
+        "company": "V Shred",
+        "summary": "",
+        "url": "https://vshred.com",
+        "logo_url": "",
+        "tenure": "1.5 Years",
+        "bullets": [
+          "Architected and implemented advanced AI automation workflows using N8N to monitor, analyze, and alert on A/B testing data, integrating multiple services (analytics APIs, databases, notification systems) with clean separation between business logic and integration adapters.",
+          "Built a Conversion Rate Optimization department from the ground up, designing the core split testing architecture including data modeling, event-driven reporting pipelines, and service orchestration between frontend experiments and backend analytics systems.",
+          "Implemented comprehensive DataDog instrumentation across distributed services, designing monitoring architecture for critical sales funnels, API endpoints, and core web vitals with automated alerting and incident response workflows.",
+          "Leveraged AI tools (GPT-4, Copilot) extensively to accelerate development velocity, automate repetitive tasks, and enhance code quality through AI-assisted refactoring and documentation generation."
+        ],
+        "location": "Remote",
+        "positions": [
+          {
+            "position": "Senior Full Stack Engineer",
+            "startDate": "2024-03",
+            "endDate": "Current"
+          }
+        ]
+      },
+      {
+        "company": "Metabolic",
+        "summary": "",
+        "url": "https://metabolic.com",
+        "logo_url": "",
+        "tenure": "4 Years",
+        "bullets": [
+          "Architected core infrastructure and microservices for system reliability and scale, designing service boundaries with clean interfaces, implementing caching strategies (Redis), and establishing pub/sub patterns for asynchronous processing across distributed systems.",
+          "Led frontend architecture as Frontend Architect, establishing design patterns and interface contracts that cleanly separated business logic from UI rendering concerns, enabling independent scaling and testing of application layers.",
+          "Developed high-performance front-end applications with Nuxt 3/Vue 3 and robust APIs using Laravel, implementing RESTful service architectures with proper authentication, rate limiting, and API versioning strategies.",
+          "Designed and implemented service uptime monitoring and alerting systems, architecting observability into distributed services and establishing SLAs for critical system components.",
+          "Collaborated with leadership on system architecture decisions that contributed to scaling infrastructure to support company revenue growth from $30M to $90M annually, requiring careful consideration of database sharding, caching layers, and service decomposition.",
+          "Initiated and led the frontend department, hiring and mentoring developers in architectural principles, design patterns, and best practices for building maintainable, scalable applications."
+        ],
+        "location": "Remote",
+        "positions": [
+          {
+            "position": "Frontend Architect",
+            "startDate": "2022-05",
+            "endDate": "2023-12",
+            "summary": "Optional summary of the role."
+          },
+          {
+            "position": "Senior Full Stack Engineer",
+            "startDate": "2021-06",
+            "endDate": "2022-05"
+          },
+          {
+            "position": "Full Stack Engineer II",
+            "startDate": "2020-01",
+            "endDate": "2021-05"
+          }
+        ]
+      },
+      {
+        "company": "Crosby Interactive",
+        "summary": "",
+        "url": "https://crosbyinteractive.com",
+        "logo_url": "",
+        "tenure": "6 Years",
+        "bullets": [
+          "Architected and developed a multi-tenant SaaS CRM system using Laravel, implementing clean service layer architecture with repository patterns, event-driven workflows, and proper separation of domain logic from infrastructure concerns.",
+          "Led the development team as CTO, establishing architectural standards, design review processes, and Agile workflows that improved team efficiency and code quality across multiple concurrent projects.",
+          "Designed and executed complex web applications over $200K in value, architecting solutions that integrated multiple third-party services (payment gateways, email providers, analytics) through abstraction layers and adapter patterns.",
+          "Built scalable e-commerce solutions on WordPress and Magento, implementing caching strategies, database optimization, and service integrations that handled high-traffic volumes during peak seasons."
+        ],
+        "location": "Louisville, KY",
+        "positions": [
+          {
+            "position": "Chief Technical Officer",
+            "startDate": "2017-09",
+            "endDate": "2019-10"
+          },
+          {
+            "position": "Senior Web Developer",
+            "startDate": "2014-10",
+            "endDate": "2017-09"
+          },
+          {
+            "position": "Junior Web Developer",
+            "startDate": "2013-11",
+            "endDate": "2014-10"
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Resume Web App",
+        "summary": "JSON Powered Resume (you are here)",
+        "url": "https://lgrimsley.com",
+        "image_url": "/resume-website.png",
+        "repo": {
+          "icon": "bi:github",
+          "url": "https://github.com/lgrimsley/resume",
+          "private": false,
+          "access": "Open Source"
+        },
+        "bullets": [
+          "Architected a lightweight Vue 3 application with clean separation between data layer (JSON), state management (Pinia), and presentation components.",
+          "Designed an extensive JSON schema to standardize resume data structure, enabling easy content updates without touching application code.",
+          "Implemented state hydration patterns with Pinia stores for client-side data persistence and reactive state management.",
+          "Built custom animations, theme system with dark mode support, and developer tools including JSON viewer for transparency.",
+          "Technical Stack: Vue 3, TypeScript, TailwindCSS, Pinia, Vercel"
+        ],
+        "keywords": ["Vue 3", "TailwindCSS", "Pinia", "Vercel", "Animation", "JSON", "Architecture"]
+      },
+      {
+        "name": "Project Magic",
+        "summary": "AI-Powered Jira Planning - SaaS Prototype",
+        "url": "https://projectmagic.ai",
+        "image_url": "/project-magic.png",
+        "repo": {
+          "icon": "bi:github",
+          "url": "https://github.com/lgrimsley/ticket-enricher",
+          "private": true,
+          "access": "Request Access"
+        },
+        "bullets": [
+          "Architected a distributed system integrating LLM APIs, Jira REST API, and custom backend services with clean separation of concerns using interface-based design patterns and dependency injection.",
+          "Designed parallel processing architecture using async/await patterns and job queues to handle concurrent LLM requests and Jira API calls, enabling generation of complex ticket hierarchies in seconds.",
+          "Implemented comprehensive Jira integration layer with adapter pattern, abstracting Jira-specific implementation details behind clean interfaces to support flexible custom field mapping and future platform extensibility.",
+          "Built RESTful API backend in Laravel with proper service layer architecture, separating business logic (ticket generation rules, validation) from infrastructure concerns (API clients, database access).",
+          "Developed responsive Nuxt 3 frontend with real-time progress updates via WebSocket connections, demonstrating event-driven architecture between client and server.",
+          "Technical Stack: Nuxt 3, Vue 3, TypeScript, TailwindCSS, Laravel 10, MySQL, AWS, REST APIs, Async Processing"
+        ],
+        "keywords": ["System Architecture", "LLM Integration", "Async Processing", "Nuxt 3", "Vue 3", "Laravel 10", "REST API", "MySQL", "AWS", "Service Design", "Interface-Driven Design"]
+      }
+    ],
+    "education": [],
+    "references": [
+      {
+        "name": "Marc Stockman",
+        "position": "CEO",
+        "company": "Metabolic",
+        "linkedin": "https://linkedin.com/in/marcstockman",
+        "relationship": "Former Employer",
+        "reference_type": "Professional"
+      },
+      {
+        "name": "Luis Mata",
+        "position": "CTO",
+        "company": "Metabolic",
+        "linkedin": "https://www.linkedin.com/in/cto-luis-mata/",
+        "relationship": "Former Direct Report",
+        "reference_type": "Professional"
+      },
+      {
+        "name": "Alex Sterling",
+        "position": "Senior Engineer",
+        "company": "Metabolic",
+        "linkedin": "https://www.linkedin.com/in/alex-sterling-5013942b/",
+        "relationship": "Former Colleague",
+        "reference_type": "Professional"
+      },
+      {
+        "name": "Brandon Farber",
+        "position": "Senior Engineer",
+        "company": "Metabolic",
+        "linkedin": "https://www.linkedin.com/in/brandonfarber/",
+        "relationship": "Former Colleague",
+        "reference_type": "Professional"
+      },
+      {
+        "name": "Angie Thompson Evjen",
+        "position": "Senior Director of UX",
+        "company": "Metabolic",
+        "linkedin": "https://www.linkedin.com/in/angiethompson2",
+        "relationship": "Former Colleague",
+        "reference_type": "Professional"
+      },
+      {
+        "name": "Keith Adamson",
+        "position": "Sr. Tech Delivery Manager",
+        "company": "Metabolic",
+        "linkedin": "https://www.linkedin.com/in/kadamson96/",
+        "relationship": "Former Colleague",
+        "reference_type": "Professional"
+      }
+    ],
+    "recommendations": [
+      {
+        "name": "Luis Mata",
+        "position": "CTO",
+        "company": "Metabolic",
+        "linkedin": "https://www.linkedin.com/in/cto-luis-mata/",
+        "summary": "<p>As a Chief Technology Officer (CTO), one of my primary responsibilities is strategically preparing for leadership transitions within the company. In this context, Logan Grimsley would have been an exemplary choice for succeeding in a high-level technical role at Metabolic.</p><p> Since my initial interaction with Logan while collaborating with the CRO team, he has consistently demonstrated an exceptional blend of intuitive and analytical thinking. This rare combination is pivotal in making critical business and technical decisions. Logan's innate ability to navigate seamlessly between critical and creative thinking is a hallmark of effective leadership.</p><p>Logan's proficiency is not just limited to his cognitive skills. His technical expertise is remarkable, particularly in front-end design and backend development. He has shown an outstanding grasp of solid design principles and robust backend methodologies. His technical understanding and leadership skills make him an ideal candidate for a Chief Architect position in any organization.</p><p>His comprehensive skill set truly sets Logan apart, encompassing the management, leadership, mentoring, and technical prowess necessary to design and develop applications from the front end to the back end. His contributions have been instrumental in scaling the company's operations and enhancing overall efficiency. Logan's role in developing high-performance front-end applications using Nuxt 3/Vue 3 and crafting robust Laravel APIs have significantly boosted user engagement and operational efficiency. Additionally, his foresight in architecting core infrastructure and services for system reliability and scalability has been a cornerstone in the company's growth.</p><p>Logan's collaborative efforts with UX designers and leadership in creating scalable, user-centric features have improved user experience and contributed to a substantial increase in company revenue. His skills in REST APIs, system architecture, API development, and various other technologies are a testament to his versatility and depth of knowledge in the field.</p> <p>In summary, Logan Grimsley is a multifaceted professional with the necessary skills and vision to excel in a leadership role within the tech industry. His track record at Metabolic and his innate leadership qualities make him an invaluable asset for any organization looking to foster innovation and drive success.</p>"
+      },
+      {
+        "name": "Angie Thompson Evjen",
+        "position": "Senior Director of UX",
+        "company": "Metabolic",
+        "linkedin": "https://www.linkedin.com/in/angiethompson2",
+        "summary": "<p>I had the privilege of working with with Logan for over 3 years at Metabolic, where I led the UX and product design team. During this time, Logan consistently demonstrated his exceptional skills as a full-stack developer. What truly sets Logan apart is his ability to seamlessly bridge the gap between back-end development and front-end user experience.</p><p>Logan's technical expertise is remarkable; he has the capability to create robust back-end systems while paying meticulous attention to perfecting the front-end down to the last pixel. His commitment to delivering top-notch user experiences is evident in every project we worked on together.</p><p>Plus, Logan is a dream to work with. He has an unwavering positive attitude and remains calm and composed even in the face of tight deadlines and challenging expectations. </p><p>I wholeheartedly recommend him to any organization seeking a versatile, skilled, and dedicated full-stack developer. Any team fortunate enough to have him on board will undoubtedly benefit from his expertise and positive presence.</p>"
+      },
+      {
+        "name": "Mark Stockman",
+        "position": "CEO & Founder",
+        "company": "Metabolic",
+        "linkedin": "https://www.linkedin.com/in/marcstockman/",
+        "summary": "<p>I had the pleasure of working with Logan for the last 4 years during extremely rapid growth. We hired Logan as part of our initiative to in-source our engineering work with a small team of highly skilled engineers.</p><p>As a marketing-focused company that had extremely high DTC ad spend, it was critical we be able to develop conversion funnels with the front-end and back-end work that could sustain high traffic volumes. Logan was able to do that, successfully working on both front-end and back-end elements, showing extreme ownership and thoughtfulness to ensure things were done right in a way that could scale.</p><p></o>Logan also showed fantastic leadership skills, frequently volunteering to lead various initiatives. He's great at communicating and demonstrated fantastic collaboration skills both with the rest of the engineering team as well as the business team. I couldn't recommend Logan more highly – great engineer, great teammate, and great person overall.</p>"
+      },
+      {
+        "name": "Alex Sterling",
+        "position": "Senior Engineer",
+        "company": "Metabolic",
+        "linkedin": "https://www.linkedin.com/in/alex-sterling-5013942b/",
+        "summary": "<p>Logan is a fantastic developer who is willing to dive into projects full of vague requirements or broad implementation guidelines (or none at all), take the reins to carefully define the specifics of the requirements and execute on an expert implementation that sets your project up for future success. Logan's expertise in modern JavaScript frameworks, CSS/SCSS, PHP, SQL and more enable him to jump into a vast array of projects and perform.</p><p> Always with an eye to the future, Logan's team chemistry and cross-functional communication skills set the business up for durable tech success. It is always a pleasure to deeply collaborate and creatively innovate with Logan as well as working completely separately with complete trust in Logan's stewardship of any project.</p> <p>Whether you're trying to burn down an intimidating mountain of aging tech debt or lay the dependable foundation for your tech platform, Logan's abilities to troubleshoot, architect and deliver will always impress.</p>"
+      },
+      {
+        "name": "Keith Adamson",
+        "position": "Sr. Tech Delivery Manager",
+        "company": "Metabolic",
+        "linkedin": "https://www.linkedin.com/in/kadamson96/",
+        "summary": "<p>Logan is an exceptional team player and rock-solid developer. I worked with Logan as the tech delivery manager for the team. Logan was the go-to-guy when we had difficult problems to solve, were up against tight timelines and when we needed a strong technical lead on high-priority initiatives.</p><p>Logan takes ownership within the team to deliver what the business requires, not only for the work he has on his plate but also goes out of his way to make sure the rest of the team is in a position to complete their goals.</p><p>Logan's ability to complete work quickly with high quality is nothing short of impressive. Logan also is a master of the 'soft' skills needed to lead. He's able to offer solutions, make smart decisions when information may be missing or incomplete, and communicate with non-technical team members to keep the whole group in sync.</p><p>Logan will be one of the most valuable developers on any team he joins in the future.</p>"
+      },
+      {
+        "name": "Andrew Alba",
+        "position": "Senior Full Stack Engineer",
+        "company": "Metabolic",
+        "linkedin": "https://www.linkedin.com/in/andrewalba/",
+        "summary": "<p>It was my pleasure to work alongside Logan Grimsley for a year, and without hesitation, I recommend him for any senior full stack engineering position. Logan is not just a colleague; he's a true asset to any tech team.</p><p>Logan's generosity with his time is truly commendable. In an industry where time is often the scarcest resource, he goes above and beyond to help out, whether it's with troubleshooting code or explaining complex concepts to the team. His willingness to share knowledge and support his colleagues makes him a standout professional.</p><p>When it comes to technical skills, Logan's knowledge spans the entire spectrum of front-end and back-end technologies. His versatility allows him to seamlessly navigate through the intricacies of a project, contributing to its success from both the user interface to the server logic.</p><p>One of Logan's standout qualities is his fearlessness when it comes to challenging ideas. If he believes there's a better solution, he doesn't hesitate to voice his perspective, contributing to a culture of continuous improvement and innovation within the team.</p><p>Logan possesses a superpower for translating complicated business logic into easily understandable chunks. This skill not only makes him an effective communicator but also enhances the collaborative problem-solving dynamic within the team.</p><p>His patience and kindness are evident in every interaction. In an environment that can sometimes be high-pressure, Logan remains calm and collected, fostering a positive atmosphere for everyone.</p><p>His exceptional listening skills extend beyond the codebase – Logan is an avid consumer of audiobooks, showcasing his commitment to continuous learning and personal growth. And yes, he's not just a senior full stack engineer; he's a Star Wars fan, bringing a touch of the galaxy far, far away to the tech world.</p><p>In conclusion, Logan Grimsley is the kind of senior full stack engineer every team dreams of having. His technical expertise, collaborative spirit, and genuine personality make him an outstanding professional. I wholeheartedly recommend Logan for any position that requires a skilled and dedicated senior engineer.</p>"
+      }
+    ],
+    "skills": {
+      "languages": ["PHP", "JavaScript", "TypeScript", "Node.js", "SQL", "CSS", "HTML"],
+      "technologies": ["Laravel", "Vue", "Nuxt", "REST", "OpenAPI", "Redis", "MySQL", "Tailwind", "Bootstrap", "jQuery", "Blade", "SASS"],
+      "services": ["AWS", "Redis", "MySQL", "NGINX", "Apache", "SSH", "UNIX", "DigitalOcean", "Git", "GitHub", "Jira", "Bitbucket", "Opsgenie", "DataDog"],
+      "tools": ["Visual Studio Code", "GPT-4", "GitHub Copilot", "Postman", "Docker", "Firefox Developer Edition", "HeidiSQL"],
+      "architecture": ["Microservices", "REST APIs", "Pub/Sub Patterns", "Event-Driven Architecture", "Service-Oriented Architecture", "Interface Design", "Separation of Concerns", "Repository Pattern", "Adapter Pattern", "Dependency Injection"]
+    },
+    "softSkills": ["System Architecture & Design", "Ownership Mentality", "Technical Leadership", "AI-Enhanced Workflows", "Collaborative", "Mentoring & Teaching"]
+  }

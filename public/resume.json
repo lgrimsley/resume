@@ -6,11 +6,11 @@
     "phone": "(502) 716-9026",
     "url": "https://lgrimsley.com",
     "resume_url": "/Logan Grimsley - Resume 11_2023.pdf",
-    "summary": "Seasoned engineer specializing in rapid development of web applications and tenaciously pursuing project goals. Committed to engineering solid, effective solutions, I balance my professional pursuits with family life as an engaged father and supportive husband. An avid audiobook listener, I'm always learning and enjoy dissecting complex technical problems. My drive is simple: to excel in every challenge, at work and at home.",
+    "summary": "Seasoned engineer specializing in rapid development of web applications and tenaciously pursuing project goals. Committed to engineering solid, effective solutions, I balance my professional pursuits with family life as an engaged father and supportive husband. My hobbies include golfing, listening to audiobooks, and experimenting with AI tools and automation. My drive is simple: to continuously improve myself by rising to meet the next challenge.",
     "status": "Open To Work",
     "information": {
       "location": "Louisville, KY",
-      "yearsOfExperience": "10+",
+      "yearsOfExperience": "15+",
       "availability": "Full Time",
       "relocation": "Open to Relocation",
       "remote": "Open to Remote"
@@ -32,6 +32,27 @@
     "image": "/avatar.png"
   },
   "work": [
+    {
+      "company": "V Shred",
+      "summary": "",
+      "url": "https://vshred.com",
+      "logo_url": "",
+      "tenure": "1.5 Years",
+      "bullets": [
+        "Built a Conversion Rate Optimization department from the ground up around the existing sales funnel architecture, including core A/B testing features, proper data modeling, and reporting capabilities. Managed and ran this department alongside the CEO while hiring dedicated CRO staff."  ,
+        "Learned advanced data visualization techniques and worked extensively in BI software (SigmaApp) in order to foster a data-driven decision making culture",
+        "Implemented advanced AI automation tools via N8N to perform many different business-critical services such as conversion data delivery for ad telemetry, and to perform split test analysis and basic decision making.",
+        "Learned DataDog instrumentation and visualization techniques, used to create monitoring and alerting for the company's critical services, sales funnels, and core web vitals."
+      ],
+      "location": "Remote",
+      "positions": [
+        {
+          "position": "Senior Full Stack Engineer",
+          "startDate": "2024-03",
+          "endDate": "Current"
+        }
+      ]
+    },
     {
       "company": "Metabolic",
       "summary": "",
@@ -235,10 +256,10 @@
     }
   ],
   "skills": {
-    "languages": ["TypeScript", "JavaScript", "CSS", "PHP", "Node.js", "SQL", "HTML"],
+    "languages": ["PHP", "TypeScript", "JavaScript", "CSS", "Node.js", "SQL", "HTML"],
     "technologies": ["Laravel", "Vue", "Nuxt", "Tailwind", "Bootstrap", "jQuery", "Blade", "REST", "OpenAPI", "SASS"],
-    "services": ["SSH", "UNIX", "AWS", "DigitalOcean", "NGINX", "Apache", "Git", "GitHub", "Jira", "Bitbucket", "Opsgenie"],
-    "tools": ["Visual Studio Code", "GPT-4", "Copilot", "Postman", "Docker", "Firefox Developer Edition", "HeidiSQL"]
+    "services": ["SSH", "UNIX", "AWS", "DataDog", "SigmaApp", "Tableau", "DigitalOcean", "NGINX", "Apache", "Git", "GitHub", "Jira", "Bitbucket", "Sentry"],
+    "tools": ["VSCode/Cursor", "N8N",  "Postman", "Docker", "HeidiSQL"]
   },
-  "softSkills": ["Ownership Mentality", "Collaborative", "User Focused", "Language & Articulation", "Leadership & Empathy"]
+  "softSkills": ["Ownership Mentality", "Collaborative", "End-User First Mindset", "Data-Driven Decision Making", "Tenacity, Focus, and Perseverance"]
 }
