@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Logan Grimsley",
-    "label": "Full Stack Engineer",
+    "label": "Full Stack Architect",
     "email": "lgrimsley@gmail.com",
     "phone": "(502) 716-9026",
     "url": "https://lgrimsley.com",
     "resume_url": "/Logan Grimsley - Resume 11_2023.pdf",
-    "summary": "Seasoned engineer specializing in rapid development of web applications and tenaciously pursuing project goals. Committed to engineering solid, effective solutions, I balance my professional pursuits with family life as an engaged father and supportive husband. My hobbies include golfing, listening to audiobooks, and experimenting with AI tools and automation. My drive is simple: to continuously improve myself by rising to meet the next challenge.",
+    "summary": "Seasoned architect specializing in data-driven software solutions and business-first systems engineering. Passionate self-starter anchored in critical business metrics and goals, always measuring twice and cutting once. I balance my professional pursuits with family life as an engaged father and supportive husband. My hobbies include golf, reading/audiobooks, and experimenting with AI tools and automation. My drive is simple: always rise to exceed the next challenge.",
     "status": "Open To Work",
     "information": {
       "location": "Louisville, KY",
@@ -39,10 +39,10 @@
       "logo_url": "",
       "tenure": "1.5 Years",
       "bullets": [
-        "Built a Conversion Rate Optimization department from the ground up around the existing sales funnel architecture, including core A/B testing features, proper data modeling, and reporting capabilities. Managed and ran this department alongside the CEO while hiring dedicated CRO staff."  ,
-        "Learned advanced data visualization techniques and worked extensively in BI software (SigmaApp) in order to foster a data-driven decision making culture",
-        "Implemented advanced AI automation tools via N8N to perform many different business-critical services such as conversion data delivery for ad telemetry, and to perform split test analysis and basic decision making.",
-        "Learned DataDog instrumentation and visualization techniques, used to create monitoring and alerting for the company's critical services, sales funnels, and core web vitals."
+        "Bootstrapped a Conversion Rate Optimization department from the ground up around a legacy sales funnel architecture, including core A/B testing features, proper data modeling, and reporting capabilities. Managed and ran this department alongside the CEO while hiring dedicated CRO staff before handing off operations."  ,
+        "Fostered a data-driven decision making culture from the top down, influencing both technical and non-technical leadership to lean into our BI software to course-correct on many critical business metrics.",
+        "Implemented advanced AI automation tools via N8N to perform many different business-critical services such as conversion data delivery for ad telemetry, and to perform split test analysis",
+        "Used DataDog to create monitoring and alerting for the company's critical services, sales funnels, and core web vitals. Monitored user experiences through RUM and recordings to identify and implement improvements that directly led to revenue growth."
       ],
       "location": "Remote",
       "positions": [
